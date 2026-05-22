@@ -1,0 +1,2308 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeMinGWFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mingw32-make.exe"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "/REGISTRY-NOTFOUND/bin/"
+      - "c:/MinGW/bin/"
+      - "/MinGW/bin/"
+      - "/REGISTRY-NOTFOUND/MinGW/bin/"
+    searched_directories:
+      - "C:/mingw64/bin/mingw32-make.exe.com"
+    found: "C:/mingw64/bin/mingw32-make.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/mingw64/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        D:/DBLP_Extreme/build/CMakeFiles/4.3.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/ar.com"
+    found: "C:/mingw64/bin/ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/ranlib.com"
+    found: "C:/mingw64/bin/ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/strip.com"
+    found: "C:/mingw64/bin/strip.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/ld.com"
+    found: "C:/mingw64/bin/ld.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/nm.com"
+    found: "C:/mingw64/bin/nm.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/objdump.com"
+    found: "C:/mingw64/bin/objdump.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/objcopy.com"
+    found: "C:/mingw64/bin/objcopy.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/readelf.com"
+    found: "C:/mingw64/bin/readelf.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/dlltool.com"
+    found: "C:/mingw64/bin/dlltool.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/addr2line.com"
+    found: "C:/mingw64/bin/addr2line.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/tapi.com"
+      - "C:/mingw64/bin/tapi.exe"
+      - "C:/mingw64/bin/tapi"
+      - "C:/usr/bin/tapi.com"
+      - "C:/usr/bin/tapi.exe"
+      - "C:/usr/bin/tapi"
+      - "C:/Windows/System32/tapi.com"
+      - "C:/Windows/System32/tapi.exe"
+      - "C:/Windows/System32/tapi"
+      - "C:/Windows/tapi.com"
+      - "C:/Windows/tapi.exe"
+      - "C:/Windows/tapi"
+      - "C:/Windows/System32/wbem/tapi.com"
+      - "C:/Windows/System32/wbem/tapi.exe"
+      - "C:/Windows/System32/wbem/tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi"
+      - "C:/Windows/System32/OpenSSH/tapi.com"
+      - "C:/Windows/System32/OpenSSH/tapi.exe"
+      - "C:/Windows/System32/OpenSSH/tapi"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/tapi.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/tapi.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/tapi"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/tapi.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/tapi.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/tapi"
+      - "C:/Program Files/dotnet/tapi.com"
+      - "C:/Program Files/dotnet/tapi.exe"
+      - "C:/Program Files/dotnet/tapi"
+      - "C:/Program Files (x86)/pcsuite/tapi.com"
+      - "C:/Program Files (x86)/pcsuite/tapi.exe"
+      - "C:/Program Files (x86)/pcsuite/tapi"
+      - "D:/Anaconda/tapi.com"
+      - "D:/Anaconda/tapi.exe"
+      - "D:/Anaconda/tapi"
+      - "D:/Graphviz-14.0.4-win32/bin/tapi.com"
+      - "D:/Graphviz-14.0.4-win32/bin/tapi.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/tapi"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/tapi.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/tapi.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/tapi"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/tapi.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/tapi.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/tapi"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/tapi.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/tapi.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/tapi"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/tapi.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/tapi.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/tapi"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/tapi.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/tapi.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/tapi"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/tapi.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/tapi.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/tapi"
+      - "C:/Program Files/CMake/bin/tapi.com"
+      - "C:/Program Files/CMake/bin/tapi.exe"
+      - "C:/Program Files/CMake/bin/tapi"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/tapi.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/tapi.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/tapi"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/tapi.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/tapi.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/tapi"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/tapi.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/tapi.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+      - "D:/cursor/resources/app/bin/tapi.com"
+      - "D:/cursor/resources/app/bin/tapi.exe"
+      - "D:/cursor/resources/app/bin/tapi"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/tapi.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/tapi.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-16.1"
+      - "gcc-ar-16"
+      - "gcc-ar16"
+      - "gcc-ar"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/gcc-ar-16.1.com"
+      - "C:/mingw64/bin/gcc-ar-16.1.exe"
+      - "C:/mingw64/bin/gcc-ar-16.1"
+      - "C:/usr/bin/gcc-ar-16.1.com"
+      - "C:/usr/bin/gcc-ar-16.1.exe"
+      - "C:/usr/bin/gcc-ar-16.1"
+      - "C:/Windows/System32/gcc-ar-16.1.com"
+      - "C:/Windows/System32/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/gcc-ar-16.1"
+      - "C:/Windows/gcc-ar-16.1.com"
+      - "C:/Windows/gcc-ar-16.1.exe"
+      - "C:/Windows/gcc-ar-16.1"
+      - "C:/Windows/System32/wbem/gcc-ar-16.1.com"
+      - "C:/Windows/System32/wbem/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/wbem/gcc-ar-16.1"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.1.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.1"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.1.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.1.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.1"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar-16.1.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar-16.1.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar-16.1"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar-16.1.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar-16.1.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar-16.1"
+      - "C:/Program Files/dotnet/gcc-ar-16.1.com"
+      - "C:/Program Files/dotnet/gcc-ar-16.1.exe"
+      - "C:/Program Files/dotnet/gcc-ar-16.1"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar-16.1.com"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar-16.1.exe"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar-16.1"
+      - "D:/Anaconda/gcc-ar-16.1.com"
+      - "D:/Anaconda/gcc-ar-16.1.exe"
+      - "D:/Anaconda/gcc-ar-16.1"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar-16.1.com"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar-16.1.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar-16.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-16.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-16.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar-16.1"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar-16.1.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar-16.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar-16.1"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.1.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.1.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.1"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.1.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.1.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.1"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar-16.1.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar-16.1.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar-16.1"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar-16.1.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar-16.1.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar-16.1"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.1.com"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.1.exe"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.1"
+      - "D:/cursor/resources/app/bin/gcc-ar-16.1.com"
+      - "D:/cursor/resources/app/bin/gcc-ar-16.1.exe"
+      - "D:/cursor/resources/app/bin/gcc-ar-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar-16.1"
+      - "C:/mingw64/bin/gcc-ar-16.com"
+      - "C:/mingw64/bin/gcc-ar-16.exe"
+      - "C:/mingw64/bin/gcc-ar-16"
+      - "C:/usr/bin/gcc-ar-16.com"
+      - "C:/usr/bin/gcc-ar-16.exe"
+      - "C:/usr/bin/gcc-ar-16"
+      - "C:/Windows/System32/gcc-ar-16.com"
+      - "C:/Windows/System32/gcc-ar-16.exe"
+      - "C:/Windows/System32/gcc-ar-16"
+      - "C:/Windows/gcc-ar-16.com"
+      - "C:/Windows/gcc-ar-16.exe"
+      - "C:/Windows/gcc-ar-16"
+      - "C:/Windows/System32/wbem/gcc-ar-16.com"
+      - "C:/Windows/System32/wbem/gcc-ar-16.exe"
+      - "C:/Windows/System32/wbem/gcc-ar-16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar-16"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ar-16"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar-16.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar-16.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar-16"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar-16.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar-16.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar-16"
+      - "C:/Program Files/dotnet/gcc-ar-16.com"
+      - "C:/Program Files/dotnet/gcc-ar-16.exe"
+      - "C:/Program Files/dotnet/gcc-ar-16"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar-16.com"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar-16.exe"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar-16"
+      - "D:/Anaconda/gcc-ar-16.com"
+      - "D:/Anaconda/gcc-ar-16.exe"
+      - "D:/Anaconda/gcc-ar-16"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar-16.com"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar-16.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar-16"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-16.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-16.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar-16"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar-16.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar-16.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar-16"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar-16"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar-16.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar-16.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar-16"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar-16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar-16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar-16"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.com"
+      - "C:/Program Files/CMake/bin/gcc-ar-16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ar-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-16"
+      - "D:/cursor/resources/app/bin/gcc-ar-16.com"
+      - "D:/cursor/resources/app/bin/gcc-ar-16.exe"
+      - "D:/cursor/resources/app/bin/gcc-ar-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar-16"
+      - "C:/mingw64/bin/gcc-ar16.com"
+      - "C:/mingw64/bin/gcc-ar16.exe"
+      - "C:/mingw64/bin/gcc-ar16"
+      - "C:/usr/bin/gcc-ar16.com"
+      - "C:/usr/bin/gcc-ar16.exe"
+      - "C:/usr/bin/gcc-ar16"
+      - "C:/Windows/System32/gcc-ar16.com"
+      - "C:/Windows/System32/gcc-ar16.exe"
+      - "C:/Windows/System32/gcc-ar16"
+      - "C:/Windows/gcc-ar16.com"
+      - "C:/Windows/gcc-ar16.exe"
+      - "C:/Windows/gcc-ar16"
+      - "C:/Windows/System32/wbem/gcc-ar16.com"
+      - "C:/Windows/System32/wbem/gcc-ar16.exe"
+      - "C:/Windows/System32/wbem/gcc-ar16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ar16"
+      - "C:/Windows/System32/OpenSSH/gcc-ar16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ar16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ar16"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar16.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar16.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ar16"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar16.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar16.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ar16"
+      - "C:/Program Files/dotnet/gcc-ar16.com"
+      - "C:/Program Files/dotnet/gcc-ar16.exe"
+      - "C:/Program Files/dotnet/gcc-ar16"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar16.com"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar16.exe"
+      - "C:/Program Files (x86)/pcsuite/gcc-ar16"
+      - "D:/Anaconda/gcc-ar16.com"
+      - "D:/Anaconda/gcc-ar16.exe"
+      - "D:/Anaconda/gcc-ar16"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar16.com"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar16.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ar16"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar16.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar16.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ar16"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar16.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar16.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ar16"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar16.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar16.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ar16"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ar16"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar16.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar16.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ar16"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ar16"
+      - "C:/Program Files/CMake/bin/gcc-ar16.com"
+      - "C:/Program Files/CMake/bin/gcc-ar16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ar16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ar16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ar16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ar16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar16"
+      - "D:/cursor/resources/app/bin/gcc-ar16.com"
+      - "D:/cursor/resources/app/bin/gcc-ar16.exe"
+      - "D:/cursor/resources/app/bin/gcc-ar16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ar16"
+      - "C:/mingw64/bin/gcc-ar.com"
+    found: "C:/mingw64/bin/gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-16.1"
+      - "gcc-ranlib-16"
+      - "gcc-ranlib16"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+    searched_directories:
+      - "C:/mingw64/bin/gcc-ranlib-16.1.com"
+      - "C:/mingw64/bin/gcc-ranlib-16.1.exe"
+      - "C:/mingw64/bin/gcc-ranlib-16.1"
+      - "C:/usr/bin/gcc-ranlib-16.1.com"
+      - "C:/usr/bin/gcc-ranlib-16.1.exe"
+      - "C:/usr/bin/gcc-ranlib-16.1"
+      - "C:/Windows/System32/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/gcc-ranlib-16.1"
+      - "C:/Windows/gcc-ranlib-16.1.com"
+      - "C:/Windows/gcc-ranlib-16.1.exe"
+      - "C:/Windows/gcc-ranlib-16.1"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.1"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.1"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.1.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.1.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.1"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib-16.1.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib-16.1.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib-16.1"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib-16.1.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib-16.1"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.1.com"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.1"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib-16.1.com"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib-16.1.exe"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib-16.1"
+      - "D:/Anaconda/gcc-ranlib-16.1.com"
+      - "D:/Anaconda/gcc-ranlib-16.1.exe"
+      - "D:/Anaconda/gcc-ranlib-16.1"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib-16.1.com"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib-16.1.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib-16.1"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-16.1.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-16.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib-16.1"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib-16.1.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib-16.1.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib-16.1"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.1.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.1.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.1"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.1.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.1"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib-16.1.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib-16.1"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib-16.1.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib-16.1"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.1.com"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.1.exe"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.1"
+      - "D:/cursor/resources/app/bin/gcc-ranlib-16.1.com"
+      - "D:/cursor/resources/app/bin/gcc-ranlib-16.1.exe"
+      - "D:/cursor/resources/app/bin/gcc-ranlib-16.1"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib-16.1.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib-16.1.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib-16.1"
+      - "C:/mingw64/bin/gcc-ranlib-16.com"
+      - "C:/mingw64/bin/gcc-ranlib-16.exe"
+      - "C:/mingw64/bin/gcc-ranlib-16"
+      - "C:/usr/bin/gcc-ranlib-16.com"
+      - "C:/usr/bin/gcc-ranlib-16.exe"
+      - "C:/usr/bin/gcc-ranlib-16"
+      - "C:/Windows/System32/gcc-ranlib-16.com"
+      - "C:/Windows/System32/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/gcc-ranlib-16"
+      - "C:/Windows/gcc-ranlib-16.com"
+      - "C:/Windows/gcc-ranlib-16.exe"
+      - "C:/Windows/gcc-ranlib-16"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.com"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/wbem/gcc-ranlib-16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib-16"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib-16"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib-16.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib-16.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib-16"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib-16.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib-16.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib-16"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.com"
+      - "C:/Program Files/dotnet/gcc-ranlib-16.exe"
+      - "C:/Program Files/dotnet/gcc-ranlib-16"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib-16.com"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib-16.exe"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib-16"
+      - "D:/Anaconda/gcc-ranlib-16.com"
+      - "D:/Anaconda/gcc-ranlib-16.exe"
+      - "D:/Anaconda/gcc-ranlib-16"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib-16.com"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib-16.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib-16"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-16.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-16.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib-16"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib-16.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib-16.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib-16"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib-16"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib-16.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib-16.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib-16"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib-16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib-16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib-16"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.com"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ranlib-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-16"
+      - "D:/cursor/resources/app/bin/gcc-ranlib-16.com"
+      - "D:/cursor/resources/app/bin/gcc-ranlib-16.exe"
+      - "D:/cursor/resources/app/bin/gcc-ranlib-16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib-16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib-16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib-16"
+      - "C:/mingw64/bin/gcc-ranlib16.com"
+      - "C:/mingw64/bin/gcc-ranlib16.exe"
+      - "C:/mingw64/bin/gcc-ranlib16"
+      - "C:/usr/bin/gcc-ranlib16.com"
+      - "C:/usr/bin/gcc-ranlib16.exe"
+      - "C:/usr/bin/gcc-ranlib16"
+      - "C:/Windows/System32/gcc-ranlib16.com"
+      - "C:/Windows/System32/gcc-ranlib16.exe"
+      - "C:/Windows/System32/gcc-ranlib16"
+      - "C:/Windows/gcc-ranlib16.com"
+      - "C:/Windows/gcc-ranlib16.exe"
+      - "C:/Windows/gcc-ranlib16"
+      - "C:/Windows/System32/wbem/gcc-ranlib16.com"
+      - "C:/Windows/System32/wbem/gcc-ranlib16.exe"
+      - "C:/Windows/System32/wbem/gcc-ranlib16"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib16.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib16.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/gcc-ranlib16"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib16.com"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib16.exe"
+      - "C:/Windows/System32/OpenSSH/gcc-ranlib16"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib16.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib16.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gcc-ranlib16"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib16.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib16.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/gcc-ranlib16"
+      - "C:/Program Files/dotnet/gcc-ranlib16.com"
+      - "C:/Program Files/dotnet/gcc-ranlib16.exe"
+      - "C:/Program Files/dotnet/gcc-ranlib16"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib16.com"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib16.exe"
+      - "C:/Program Files (x86)/pcsuite/gcc-ranlib16"
+      - "D:/Anaconda/gcc-ranlib16.com"
+      - "D:/Anaconda/gcc-ranlib16.exe"
+      - "D:/Anaconda/gcc-ranlib16"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib16.com"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib16.exe"
+      - "D:/Graphviz-14.0.4-win32/bin/gcc-ranlib16"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib16.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib16.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/gcc-ranlib16"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib16.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib16.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/gcc-ranlib16"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib16.com"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib16.exe"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib16"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/gcc-ranlib16"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib16.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib16.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/gcc-ranlib16"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib16.com"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib16.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/gcc-ranlib16"
+      - "C:/Program Files/CMake/bin/gcc-ranlib16.com"
+      - "C:/Program Files/CMake/bin/gcc-ranlib16.exe"
+      - "C:/Program Files/CMake/bin/gcc-ranlib16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/gcc-ranlib16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/gcc-ranlib16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/gcc-ranlib16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib16"
+      - "D:/cursor/resources/app/bin/gcc-ranlib16.com"
+      - "D:/cursor/resources/app/bin/gcc-ranlib16.exe"
+      - "D:/cursor/resources/app/bin/gcc-ranlib16"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib16.com"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib16.exe"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/gcc-ranlib16"
+      - "C:/mingw64/bin/gcc-ranlib.com"
+    found: "C:/mingw64/bin/gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake:167 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX.cmake:2 (__windows_compiler_gnu)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake:48 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "windres"
+      - "windres"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/pcsuite/"
+      - "D:/Anaconda/"
+      - "D:/Graphviz-14.0.4-win32/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/python.exe/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/Program Files (x86)/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/180/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "D:/cursor/resources/app/bin/"
+      - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/DBLP_Extreme/bin/"
+      - "C:/Program Files (x86)/DBLP_Extreme/sbin/"
+      - "C:/Program Files (x86)/DBLP_Extreme/"
+    searched_directories:
+      - "C:/mingw64/bin/windres.com"
+    found: "C:/mingw64/bin/windres.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Windows/system32"
+        - "C:/Windows"
+        - "C:/Windows/System32/Wbem"
+        - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+        - "C:/Windows/System32/OpenSSH/"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:/Program Files/dotnet/"
+        - "C:\\Program Files (x86)\\pcsuite\\"
+        - "D:/Anaconda"
+        - "D:\\Graphviz-14.0.4-win32\\bin"
+        - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+        - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+        - "C:\\Program Files (x86)\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\"
+        - "C:/Program Files/Microsoft SQL Server/170/DTS/Binn/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/CMake/bin"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Python/Python312/"
+        - "C:\\Users\\\u51af\u797a\u54f2\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "D:\\cursor\\resources\\app\\bin"
+        - "C:/Users/\u51af\u797a\u54f2/AppData/Local/JetBrains/Toolbox/scripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/DBLP_Extreme"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/DBLP_Extreme"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx"
+      binary: "D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fcae4/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fcae4.dir\\build.make CMakeFiles/cmTC_fcae4.dir/build
+        mingw32-make[1]: Entering directory 'D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx'
+        Building CXX object CMakeFiles/cmTC_fcae4.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\mingw64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+        Using built-in specs.
+        COLLECT_GCC=C:\\mingw64\\bin\\g++.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../../../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe --with-boot-ldflags='-pipe -fno-ident -L/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib  -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 16.1.0 (x86_64-posix-seh-rev0, Built by MinGW-Builds project) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fcae4.dir\\'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_fcae4.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccuQGrSo.s
+        GNU C++20 (x86_64-posix-seh-rev0, Built by MinGW-Builds project) version 16.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 16.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++"
+        ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward"
+        ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include"
+        ignoring nonexistent directory "C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64D:/a/_temp/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../include"
+        ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed"
+        ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: 6980627f152e0ea0937bc72fc1b5e13b
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fcae4.dir\\'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccuQGrSo.s
+        GNU assembler version 2.46.0 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.46.0.20260210
+        COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_fcae4.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fcae4.dir\\link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=C:\\mingw64\\bin\\g++.exe
+        COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../../../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe --with-boot-ldflags='-pipe -fno-ident -L/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib  -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 16.1.0 (x86_64-posix-seh-rev0, Built by MinGW-Builds project) 
+        COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fcae4.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_fcae4.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccWaR6pB.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_fcae4.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fcae4.dir/objects.a --no-whole-archive --out-implib libcmTC_fcae4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o
+        collect2 version 16.1.0
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\冯祺哲\\AppData\\Local\\Temp\\ccWaR6pB.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_fcae4.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fcae4.dir/objects.a --no-whole-archive --out-implib libcmTC_fcae4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.46.0.20260210
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fcae4.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_fcae4.'
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_fcae4.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_fcae4.dir/objects.a @CMakeFiles\\cmTC_fcae4.dir\\objects1.rsp
+        C:\\mingw64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_fcae4.dir/objects.a -Wl,--no-whole-archive -o cmTC_fcae4.exe -Wl,--out-implib,libcmTC_fcae4.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++]
+          add: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32]
+          add: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward]
+          add: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include]
+          add: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
+          add: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++]
+        collapse include dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32]
+        collapse include dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward]
+        collapse include dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include]
+        collapse include dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
+        collapse include dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/mingw64/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++;C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32;C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward;C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include;C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed;C:/mingw64/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fcae4/fast]
+        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fcae4.dir\\build.make CMakeFiles/cmTC_fcae4.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/DBLP_Extreme/build/CMakeFiles/CMakeScratch/TryCompile-xg8qmx']
+        ignore line: [Building CXX object CMakeFiles/cmTC_fcae4.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\mingw64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\g++.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../../../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe --with-boot-ldflags='-pipe -fno-ident -L/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib  -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 16.1.0 (x86_64-posix-seh-rev0  Built by MinGW-Builds project) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fcae4.dir\\']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_fcae4.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccuQGrSo.s]
+        ignore line: [GNU C++20 (x86_64-posix-seh-rev0  Built by MinGW-Builds project) version 16.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 16.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++"]
+        ignore line: [ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32"]
+        ignore line: [ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include"]
+        ignore line: [ignoring nonexistent directory "C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64D:/a/_temp/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../include"]
+        ignore line: [ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++]
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/x86_64-w64-mingw32]
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include/c++/backward]
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include]
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/include-fixed]
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 6980627f152e0ea0937bc72fc1b5e13b]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fcae4.dir\\']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccuQGrSo.s]
+        ignore line: [GNU assembler version 2.46.0 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.46.0.20260210]
+        ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fcae4.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_fcae4.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fcae4.dir\\link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\g++.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../../../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe --with-boot-ldflags='-pipe -fno-ident -L/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib  -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 16.1.0 (x86_64-posix-seh-rev0  Built by MinGW-Builds project) ]
+        ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fcae4.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_fcae4.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccWaR6pB.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_fcae4.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fcae4.dir/objects.a --no-whole-archive --out-implib libcmTC_fcae4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+          arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/collect2.exe] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.1.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\鍐ズ鍝瞈AppData\\Local\\Temp\\ccWaR6pB.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-liconv] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [--sysroot=C:/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_fcae4.exe] ==> ignore
+          arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o]
+          arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0]
+          arg [-LC:/mingw64/bin/../lib/gcc] ==> dir [C:/mingw64/bin/../lib/gcc]
+          arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib]
+          arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../..]
+          arg [-v] ==> ignore
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles\\cmTC_fcae4.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_fcae4.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        linker tool for 'CXX': ../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https:/github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe
+        remove lib [msvcrt]
+        remove lib [msvcrt]
+        collapse obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/mingw64/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o]
+        collapse obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        collapse library dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0] ==> [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0]
+        collapse library dir [C:/mingw64/bin/../lib/gcc] ==> [C:/mingw64/lib/gcc]
+        collapse library dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/mingw64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../lib] ==> [C:/mingw64/lib]
+        collapse library dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/mingw64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../..] ==> [C:/mingw64/lib]
+        implicit libs: [stdc++;mingw32;gcc_s;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;mingwex;kernel32]
+        implicit objs: [C:/mingw64/x86_64-w64-mingw32/lib/crt2.o;C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtbegin.o;C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/crtend.o]
+        implicit dirs: [C:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0;C:/mingw64/lib/gcc;C:/mingw64/x86_64-w64-mingw32/lib;C:/mingw64/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https:/github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe" "-v"
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https:/github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe" "-V"
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "../src/gcc-16.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-tls --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-mingw-wildcard --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-Builds project' --with-bugurl=https:/github.com/niXman/mingw-builds LD_FOR_TARGET=/c/buildroot/x86_64-1610-posix-seh-ucrt-rt_v14-rev0/mingw64/bin/ld.exe" "--version"
+      
+...

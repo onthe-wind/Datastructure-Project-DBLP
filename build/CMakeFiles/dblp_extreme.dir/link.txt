@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\dblp_extreme.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\dblp_extreme.dir/objects.a @CMakeFiles\dblp_extreme.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g -pthread -Wl,--whole-archive CMakeFiles\dblp_extreme.dir/objects.a -Wl,--no-whole-archive -o dblp_extreme.exe -Wl,--out-implib,libdblp_extreme.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\dblp_extreme.dir\linkLibs.rsp

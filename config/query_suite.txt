@@ -1,0 +1,19 @@
+# DBLP Extreme F5 query benchmark suite
+# Format: id | category | query (pipe-separated, query may contain spaces)
+# Lines starting with # are ignored. Empty lines skipped.
+
+q01|single_term|deep learning page:1 size:20 fuzzy:off
+q02|single_term|transformer page:1 size:20 fuzzy:off
+q03|single_term|database page:1 size:20 fuzzy:off
+q04|multi_term_or|graph neural network page:1 size:20 mode:or fuzzy:off
+q05|multi_term_or|machine learning security page:1 size:20 mode:or fuzzy:off
+q06|multi_term_and|graph neural network page:1 size:20 mode:and fuzzy:off
+q07|phrase|"deep learning" page:1 size:20 fuzzy:off
+q08|prefix|neural* page:1 size:20 fuzzy:off
+q09|fuzzy_typo|deeep learning page:1 size:20 fuzzy:1 fuzzyexp:4
+q10|sort_newest|information retrieval page:1 size:20 sort:newest fuzzy:off
+q11|broad_hot|learning page:1 size:20 mode:or fuzzy:off
+q12|deep_page|deep learning page:3 size:20 fuzzy:off
+q13|rare|hypergraph isomorphism page:1 size:20 fuzzy:off
+q14|author_like|yann lecun page:1 size:20 fuzzy:off
+q15|long|retrieval augmented generation language model page:1 size:20 mode:or fuzzy:off

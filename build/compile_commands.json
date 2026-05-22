@@ -1,0 +1,38 @@
+[
+{
+  "directory": "D:/DBLP_Extreme/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DNDEBUG @CMakeFiles/dblp_extreme.dir/includes_CXX.rsp -g -std=c++20 -O3 -march=native -pthread -o CMakeFiles\\dblp_extreme.dir\\src\\main.cpp.obj -c D:\\DBLP_Extreme\\src\\main.cpp",
+  "file": "D:/DBLP_Extreme/src/main.cpp",
+  "output": "CMakeFiles/dblp_extreme.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/DBLP_Extreme/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DNDEBUG @CMakeFiles/dblp_extreme.dir/includes_CXX.rsp -g -std=c++20 -O3 -march=native -pthread -o CMakeFiles\\dblp_extreme.dir\\src\\ExtremeEngine.cpp.obj -c D:\\DBLP_Extreme\\src\\ExtremeEngine.cpp",
+  "file": "D:/DBLP_Extreme/src/ExtremeEngine.cpp",
+  "output": "CMakeFiles/dblp_extreme.dir/src/ExtremeEngine.cpp.obj"
+},
+{
+  "directory": "D:/DBLP_Extreme/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DNDEBUG @CMakeFiles/dblp_extreme.dir/includes_CXX.rsp -g -std=c++20 -O3 -march=native -pthread -o CMakeFiles\\dblp_extreme.dir\\src\\ExtremeParser.cpp.obj -c D:\\DBLP_Extreme\\src\\ExtremeParser.cpp",
+  "file": "D:/DBLP_Extreme/src/ExtremeParser.cpp",
+  "output": "CMakeFiles/dblp_extreme.dir/src/ExtremeParser.cpp.obj"
+},
+{
+  "directory": "D:/DBLP_Extreme/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DNDEBUG @CMakeFiles/dblp_extreme.dir/includes_CXX.rsp -g -std=c++20 -O3 -march=native -pthread -o CMakeFiles\\dblp_extreme.dir\\src\\Analyzer.cpp.obj -c D:\\DBLP_Extreme\\src\\Analyzer.cpp",
+  "file": "D:/DBLP_Extreme/src/Analyzer.cpp",
+  "output": "CMakeFiles/dblp_extreme.dir/src/Analyzer.cpp.obj"
+},
+{
+  "directory": "D:/DBLP_Extreme/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DNDEBUG @CMakeFiles/dblp_extreme.dir/includes_CXX.rsp -g -std=c++20 -O3 -march=native -pthread -o CMakeFiles\\dblp_extreme.dir\\src\\F5Profile.cpp.obj -c D:\\DBLP_Extreme\\src\\F5Profile.cpp",
+  "file": "D:/DBLP_Extreme/src/F5Profile.cpp",
+  "output": "CMakeFiles/dblp_extreme.dir/src/F5Profile.cpp.obj"
+},
+{
+  "directory": "D:/DBLP_Extreme/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DNDEBUG @CMakeFiles/dblp_extreme.dir/includes_CXX.rsp -g -std=c++20 -O3 -march=native -pthread -o CMakeFiles\\dblp_extreme.dir\\src\\QuerySuite.cpp.obj -c D:\\DBLP_Extreme\\src\\QuerySuite.cpp",
+  "file": "D:/DBLP_Extreme/src/QuerySuite.cpp",
+  "output": "CMakeFiles/dblp_extreme.dir/src/QuerySuite.cpp.obj"
+}
+]

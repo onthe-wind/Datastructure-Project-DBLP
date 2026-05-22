@@ -1,0 +1,104 @@
+# F4 alias dictionary
+# Format:
+#   <source term or phrase> => <canonical single token>
+#
+# Notes:
+# - Both sides are normalized with the same tokenizer as titles.
+# - Right side must normalize to exactly one token.
+# - External rules override built-in defaults when keys conflict.
+
+# ------------------------------
+# Public health / COVID entities
+# ------------------------------
+covid19 => covid
+covid 19 => covid
+coronavirus disease 2019 => covid
+novel coronavirus => covid
+new coronavirus => covid
+2019 ncov => covid
+2019 n cov => covid
+sars cov 2 => covid
+sars cov2 => covid
+severe acute respiratory syndrome coronavirus 2 => covid
+covid 2019 => covid
+
+# ------------------------------
+# Core AI/ML concepts
+# ------------------------------
+artificial intelligence => ai
+machine learning => ml
+deep learning => dl
+reinforcement learning => rl
+representation learning => rep_learning
+self supervised learning => ssl
+self supervision => ssl
+contrastive learning => contrastive_learning
+federated learning => federated_learning
+transfer learning => transfer_learning
+multi task learning => multitask_learning
+multitask learning => multitask_learning
+active learning => active_learning
+few shot learning => fewshot_learning
+zero shot learning => zeroshot_learning
+semi supervised learning => semisupervised_learning
+weakly supervised learning => weaksupervised_learning
+
+# ------------------------------
+# Model family aliases
+# ------------------------------
+large language model => llm
+large language models => llm
+foundation model => llm
+foundation models => llm
+language model => lm
+language models => lm
+pre trained language model => plm
+pretrained language model => plm
+bidirectional encoder representations from transformers => bert
+generative pre trained transformer => gpt
+gpt 2 => gpt
+gpt 3 => gpt
+gpt 4 => gpt
+chat gpt => gpt
+chatgpt => gpt
+
+# ------------------------------
+# Vision-language and multimodal
+# ------------------------------
+vision language model => vlm
+vision language models => vlm
+multimodal language model => mllm
+multimodal large language model => mllm
+vision transformer => vit
+transformer based => transformer
+
+# ------------------------------
+# Graph / sequence models
+# ------------------------------
+graph neural network => gnn
+graph neural networks => gnn
+gnns => gnn
+graph convolutional network => gcn
+graph convolutional networks => gcn
+recurrent neural network => rnn
+recurrent neural networks => rnn
+long short term memory => lstm
+long short term memories => lstm
+variational autoencoder => vae
+variational autoencoders => vae
+generative adversarial network => gan
+generative adversarial networks => gan
+convolutional neural network => cnn
+convolutional neural networks => cnn
+
+retrieval augmented generation => rag
+retrieval-augmented generation => rag
+
+# ------------------------------
+# Common NLP task expressions
+# ------------------------------
+named entity recognition => ner
+question answering => qa
+information retrieval => ir
+text classification => text_classification
+sentiment analysis => sentiment_analysis

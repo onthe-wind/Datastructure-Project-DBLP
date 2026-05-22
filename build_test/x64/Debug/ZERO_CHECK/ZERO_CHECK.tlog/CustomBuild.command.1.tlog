@@ -1,0 +1,10 @@
+^D:\DBLP_EXTREME\BUILD_TEST\CMAKEFILES\38CB7016A87E3EBB55321389C10760CE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DBLP_Extreme -BD:/DBLP_Extreme/build_test --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/DBLP_Extreme/build_test/DBLP_Extreme.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
