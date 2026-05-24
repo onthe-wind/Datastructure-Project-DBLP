@@ -19,6 +19,7 @@
 #include <iostream>
 #include <limits>
 #include <map>
+#include <mutex>
 #include <ostream>
 #include <queue>
 #include <string>
@@ -109,6 +110,72 @@ void for_each_author_segment(std::string_view authors, auto&& fn) {
 [[nodiscard]] std::filesystem::path locate_serving_segment_file_path() {
     namespace fs = std::filesystem;
     const fs::path file_name = "serving_index.seg";
+    const fs::path rel = fs::path("segments") / file_name;
+    std::error_code cwd_ec;
+    const fs::path cwd = fs::current_path(cwd_ec);
+    const std::array<fs::path, 5> candidates = {
+        cwd_ec ? rel : cwd / rel,
+        cwd_ec ? fs::path("build") / rel : cwd.parent_path() / "build" / rel,
+        cwd_ec ? fs::path("..") / "build" / rel : cwd.parent_path() / rel,
+        fs::path(rel),
+        fs::path("cache") / rel,
+    };
+    for (const fs::path& p : candidates) {
+        std::error_code ec;
+        if (fs::exists(p, ec) && !ec) {
+            return p;
+        }
+    }
+    return candidates.front();
+}
+
+[[nodiscard]] std::filesystem::path locate_f6_collab_graph_file_path() {
+    namespace fs = std::filesystem;
+    const fs::path file_name = "f6_collab_graph.seg";
+    const fs::path rel = fs::path("segments") / file_name;
+    std::error_code cwd_ec;
+    const fs::path cwd = fs::current_path(cwd_ec);
+    const std::array<fs::path, 5> candidates = {
+        cwd_ec ? rel : cwd / rel,
+        cwd_ec ? fs::path("build") / rel : cwd.parent_path() / "build" / rel,
+        cwd_ec ? fs::path("..") / "build" / rel : cwd.parent_path() / rel,
+        fs::path(rel),
+        fs::path("cache") / rel,
+    };
+    for (const fs::path& p : candidates) {
+        std::error_code ec;
+        if (fs::exists(p, ec) && !ec) {
+            return p;
+        }
+    }
+    return candidates.front();
+}
+
+[[nodiscard]] std::filesystem::path locate_f6_author_participation_file_path() {
+    namespace fs = std::filesystem;
+    const fs::path file_name = "f6_author_participation.seg";
+    const fs::path rel = fs::path("segments") / file_name;
+    std::error_code cwd_ec;
+    const fs::path cwd = fs::current_path(cwd_ec);
+    const std::array<fs::path, 5> candidates = {
+        cwd_ec ? rel : cwd / rel,
+        cwd_ec ? fs::path("build") / rel : cwd.parent_path() / "build" / rel,
+        cwd_ec ? fs::path("..") / "build" / rel : cwd.parent_path() / rel,
+        fs::path(rel),
+        fs::path("cache") / rel,
+    };
+    for (const fs::path& p : candidates) {
+        std::error_code ec;
+        if (fs::exists(p, ec) && !ec) {
+            return p;
+        }
+    }
+    return candidates.front();
+}
+
+[[nodiscard]] std::filesystem::path locate_f6_global_clique_counts_file_path(const std::uint32_t max_order) {
+    namespace fs = std::filesystem;
+    const fs::path file_name = "f6_global_clique_counts_k" + std::to_string(max_order) + ".seg";
     const fs::path rel = fs::path("segments") / file_name;
     std::error_code cwd_ec;
     const fs::path cwd = fs::current_path(cwd_ec);
@@ -1136,7 +1203,7 @@ bool ExtremeEngine::save_serving_index() const {
     std::error_code ec;
     fs::create_directories(seg_path.parent_path(), ec);
     if (ec) {
-        std::cerr << "[WarmStart] 无法创建 segment 目录: " << seg_path.parent_path()
+        std::cerr << "[WarmStart] 无法创建服务段目录: " << seg_path.parent_path()
                   << " | " << ec.message() << '\n';
         return false;
     }
@@ -1144,7 +1211,7 @@ bool ExtremeEngine::save_serving_index() const {
     const fs::path tmp_path = seg_path.string() + ".tmp";
     std::ofstream out(tmp_path, std::ios::binary | std::ios::trunc);
     if (!out.is_open()) {
-        std::cerr << "[WarmStart] 无法打开 segment 临时文件写入: " << tmp_path << '\n';
+        std::cerr << "[WarmStart] 无法打开服务段临时文件写入: " << tmp_path << '\n';
         return false;
     }
 
@@ -1186,7 +1253,7 @@ bool ExtremeEngine::save_serving_index() const {
     out.flush();
     out.close();
     if (!out) {
-        std::cerr << "[WarmStart] 写入 serving segment 失败: " << tmp_path << '\n';
+        std::cerr << "[WarmStart] 写入服务段失败: " << tmp_path << '\n';
         return false;
     }
 
@@ -1197,11 +1264,11 @@ bool ExtremeEngine::save_serving_index() const {
         fs::rename(tmp_path, seg_path, ec);
         if (ec) {
             fs::remove(tmp_path, ec);
-            std::cerr << "[WarmStart] 无法替换 serving segment: " << seg_path << '\n';
+            std::cerr << "[WarmStart] 无法替换服务段: " << seg_path << '\n';
             return false;
         }
     }
-    std::cout << "[WarmStart] serving segment 已保存: " << seg_path << '\n';
+    std::cout << "[WarmStart] 服务段已保存: " << seg_path << '\n';
     return true;
 }
 
@@ -1432,7 +1499,7 @@ void ExtremeEngine::merge_local_indexes(std::vector<std::unique_ptr<LocalIndex>>
     avg_dl_ = n > 0 ? static_cast<float>(static_cast<double>(dl_sum) / static_cast<double>(n)) : 0.0f;
     scoring_board_.assign(n, 0.0f);
     if (!save_serving_index()) {
-        std::cerr << "[WarmStart] 警告: serving segment 保存失败，下次启动仍会回退到 XML 构建。\n";
+        std::cerr << "[WarmStart] 警告: 服务段保存失败，下次启动仍会回退到 XML 构建。\n";
     }
 }
 
@@ -3179,29 +3246,29 @@ std::string_view ExtremeEngine::build_normalized_lookup_key(std::string_view raw
 }
 
 void ExtremeEngine::print_document_details(const Document& doc, std::ostream& os) const {
-    os << "[DocID] " << doc.id << '\n';
+    os << "[文档ID] " << doc.id << '\n';
     if (!doc.title.empty()) {
-        os << "[Title] " << doc.title << '\n';
+        os << "[标题] " << doc.title << '\n';
     }
     if (!doc.authors.empty()) {
-        os << "[Authors] " << doc.authors << '\n';
+        os << "[作者] " << doc.authors << '\n';
     }
     if (!doc.journal.empty()) {
-        os << "[Journal] " << doc.journal << '\n';
+        os << "[期刊/会议] " << doc.journal << '\n';
     }
-    os << "[Year] " << doc.year << '\n';
-    os << "[DocLength] " << doc.doc_length << '\n';
+    os << "[年份] " << doc.year << '\n';
+    os << "[标题词数] " << doc.doc_length << '\n';
     if (!doc.volume.empty()) {
-        os << "[Volume] " << doc.volume << '\n';
+        os << "[卷号] " << doc.volume << '\n';
     }
     if (!doc.month.empty()) {
-        os << "[Month] " << doc.month << '\n';
+        os << "[月份] " << doc.month << '\n';
     }
     if (!doc.cdrom.empty()) {
         os << "[CDROM] " << doc.cdrom << '\n';
     }
     if (!doc.ee.empty()) {
-        os << "[EE] " << doc.ee << '\n';
+        os << "[电子版] " << doc.ee << '\n';
     }
     if (!doc.url.empty()) {
         os << "[URL] " << doc.url << '\n';
@@ -3218,7 +3285,7 @@ void ExtremeEngine::search_by_author(std::string_view query, std::ostream& os) c
     }
 
     auto emit_postings = [&](std::string_view matched_author, const std::vector<Posting>& hits) {
-        os << "[Author] " << matched_author << " | [Papers] " << hits.size() << "\n\n";
+        os << "[作者] " << matched_author << " | [论文数] " << hits.size() << "\n\n";
         for (const Posting& po : hits) {
             if (po.doc_id >= forward_index_.size()) {
                 continue;
@@ -3252,7 +3319,7 @@ void ExtremeEngine::search_by_author(std::string_view query, std::ostream& os) c
         return;
     }
 
-    os << "[F1-Fuzzy] " << key << " -> " << best_author << " | [Score] " << fuzzy_authors.front().second << "\n";
+    os << "[F1-容错] " << key << " -> " << best_author << " | [得分] " << fuzzy_authors.front().second << "\n";
     if (fuzzy_authors.size() > 1) {
         os << "[候选作者Top3] ";
         const std::size_t shown = std::min<std::size_t>(3, fuzzy_authors.size());
@@ -3509,36 +3576,36 @@ void ExtremeEngine::search_bm25(std::string_view keywords, std::ostream& os, F5S
             }
             return;
         }
-        os << "[Mode] " << (plan.boolean_mode == F5BooleanMode::And ? "AND" : "OR")
-           << " | [Sort] " << (plan.sort_mode == F5SortMode::Newest ? "newest" : "relevance")
-           << " | [Fuzzy] " << (plan.fuzzy_enabled ? "on" : "off")
+        os << "[匹配模式] " << (plan.boolean_mode == F5BooleanMode::And ? "AND" : "OR")
+           << " | [排序] " << (plan.sort_mode == F5SortMode::Newest ? "最新年份" : "相关度")
+           << " | [容错] " << (plan.fuzzy_enabled ? "开启" : "关闭")
            << '/' << plan.fuzzy_max_edits << '/' << plan.fuzzy_max_expansions
-           << " | [Matched Terms] " << matched_query_terms
-           << " | [FuzzyRewrite] " << fuzzy_rewrite_count
-           << " | [TotalHits] " << total_hits;
+           << " | [命中词数] " << matched_query_terms
+           << " | [容错改写] " << fuzzy_rewrite_count
+           << " | [总命中] " << total_hits;
         if (cache_hit) {
-            os << " | [ResultCache] hit";
+            os << " | [结果缓存] 命中";
         }
         if (w.page_mode) {
-            os << " | [Page] " << w.current_page << "/" << w.total_pages
-               << " | [PageSize] " << w.page_size
-               << " | [Window] " << w.start << "-" << (w.end == 0 ? 0 : w.end - 1);
+            os << " | [页码] " << w.current_page << "/" << w.total_pages
+               << " | [每页数量] " << w.page_size
+               << " | [结果窗口] " << w.start << "-" << (w.end == 0 ? 0 : w.end - 1);
             if (plan.offset > 0) {
-                os << "\n[Hint] page/size 模式下 offset 已忽略。\n";
+                os << "\n[提示] page/size 模式下 offset 已忽略。\n";
             }
             if (w.current_page < w.total_pages) {
-                os << "\n[Hint] 下一页可使用: page:" << (w.current_page + 1) << " size:" << w.page_size << "\n";
+                os << "\n[提示] 下一页可使用: page:" << (w.current_page + 1) << " size:" << w.page_size << "\n";
             }
         } else {
-            os << " | [Window] " << w.start << "-" << (w.end == 0 ? 0 : w.end - 1)
-               << " | [Limit] " << (plan.limit == 0 ? "ALL" : std::to_string(plan.limit));
+            os << " | [结果窗口] " << w.start << "-" << (w.end == 0 ? 0 : w.end - 1)
+               << " | [数量限制] " << (plan.limit == 0 ? "全部" : std::to_string(plan.limit));
         }
         os << "\n\n";
 
         for (std::size_t i = w.start; i < w.end; ++i) {
             const ScoreDoc& e = ordered_docs[i];
             print_document_details(forward_index_[e.second], os);
-            os << "[Rank] " << (i + 1) << '\n';
+            os << "[排名] " << (i + 1) << '\n';
             os << "[BM25] " << e.first << "\n\n";
         }
         if (profile != nullptr) {
@@ -3611,7 +3678,7 @@ void ExtremeEngine::search_bm25(std::string_view keywords, std::ostream& os, F5S
     }
     for (const std::string& sub : plan.substring_terms) {
         if (sub.size() < 3) {
-            os << "[Hint] 子串检索建议至少 3 个字符，已忽略: ~" << sub << "~\n";
+        os << "[提示] 子串检索建议至少 3 个字符，已忽略: ~" << sub << "~\n";
             continue;
         }
         collect_f5_substring_candidates(sub, expanded_terms);
@@ -3721,7 +3788,7 @@ void ExtremeEngine::search_bm25(std::string_view keywords, std::ostream& os, F5S
                 break;
             }
         }
-        os << "[Fuzzy] " << term << " -> " << fuzzy_terms.front().first << '\n';
+        os << "[容错] " << term << " -> " << fuzzy_terms.front().first << '\n';
     }
 
     if (scoring_terms.empty()) {
@@ -4306,7 +4373,7 @@ void ExtremeEngine::execute_f3_author_stats() const {
     const auto compute_ms =
         std::chrono::duration_cast<std::chrono::milliseconds>(t_compute - t0).count();
 
-    std::cout << "\n========== Top 100 Prolific Authors ==========\n";
+    std::cout << "\n========== 发文量最高的 100 位作者 ==========\n";
     std::cout << "[计时] 统计耗时: " << compute_ms << " ms\n\n";
 
     if (f3_top100_cache_.empty()) {
@@ -4314,7 +4381,7 @@ void ExtremeEngine::execute_f3_author_stats() const {
     } else {
         std::size_t rank = 1;
         for (const auto& entry : f3_top100_cache_) {
-            std::cout << '[' << rank << "] " << entry.second << ": " << entry.first << " papers\n";
+            std::cout << '[' << rank << "] " << entry.second << ": " << entry.first << " 篇论文\n";
             ++rank;
         }
     }
@@ -4346,16 +4413,16 @@ void ExtremeEngine::execute_f4_conference_analytics() const {
     }
     const std::vector<F4HotEntry>& ranked = cache_it->second;
 
-    std::cout << "\n========== Annual Trending Words ==========\n";
-    std::cout << "[Year] " << target_year << '\n';
-    std::cout << "[Matched Documents] " << matched_docs << "\n\n";
+    std::cout << "\n========== 年度热词分析 ==========\n";
+    std::cout << "[年份] " << target_year << '\n';
+    std::cout << "[匹配文档数] " << matched_docs << "\n\n";
 
     if (ranked.empty()) {
         std::cout << "未统计到可用热词。\n";
     } else {
         std::size_t rank = 1;
         for (const auto& entry : ranked) {
-            std::cout << '[' << rank << "] keyword: " << entry.term << " (Frequency: " << entry.freq << ")\n";
+            std::cout << '[' << rank << "] 关键词: " << entry.term << "（频次: " << entry.freq << "）\n";
 
             if (!kF4FastModeDisableEvidence) {
                 constexpr std::size_t kEvidenceLimit = 3;
@@ -4369,7 +4436,7 @@ void ExtremeEngine::execute_f4_conference_analytics() const {
                         if (doc.year != target_year || doc.title.empty()) {
                             continue;
                         }
-                        std::cout << "    - evidence: " << doc.title << '\n';
+                        std::cout << "    - 证据: " << doc.title << '\n';
                         ++emitted;
                         if (emitted >= kEvidenceLimit) {
                             break;
@@ -4380,7 +4447,7 @@ void ExtremeEngine::execute_f4_conference_analytics() const {
             ++rank;
         }
         if (kF4FastModeDisableEvidence) {
-            std::cout << "\n[Fast Mode] 证据标题回扫已禁用，以压缩 F4 到亚秒级响应。\n";
+            std::cout << "\n[快速模式] 证据标题回扫已禁用，以压缩 F4 到亚秒级响应。\n";
         }
     }
 
@@ -4389,101 +4456,564 @@ void ExtremeEngine::execute_f4_conference_analytics() const {
     std::cout << "\n[计时] F4 执行总耗时: " << total_ms << " ms\n";
 }
 
-void ExtremeEngine::execute_f6_global_ranking() const {
+void ExtremeEngine::execute_f6_author_local_maximal_cliques(const std::string_view target_author_raw) const {
     const auto t0 = std::chrono::steady_clock::now();
+    std::cout << "[模式] 目标作者局部合作网络 + bitset Bron-Kerbosch + pivot，统计局部极大完全子图。\n";
 
-    constexpr std::size_t kMaxAuthorsPerPaper = 64;
-    constexpr unsigned long long kCountSaturation = std::numeric_limits<unsigned long long>::max();
-
-    std::cout << "========== F6 全图聚团统计 ==========\n";
-    std::cout << "[Mode] Degeneracy Ordering + DAG 重定向 + 递归有序交集，统计到最大可达阶。\n";
-
-    std::unordered_map<std::string_view, std::uint32_t> author_id;
-    author_id.reserve(author_global_.size() * 2 + 1);
-    std::uint32_t next_id = 0;
-    author_global_.for_each([&](const std::string_view author, const std::vector<Posting>&) {
-        if (!author.empty()) {
-            author_id.emplace(author, next_id++);
-        }
-    });
-
-    const std::uint32_t author_count = next_id;
-    if (author_count == 0) {
-        std::cout << "作者图为空。\n";
+    const std::string_view target_key = build_normalized_lookup_key(target_author_raw);
+    if (target_key.empty()) {
+        std::cout << "查询无效（无法规范化目标作者）。\n";
+        return;
+    }
+    const std::vector<Posting>* plist = author_global_.find(target_key);
+    if (plist == nullptr || plist->empty()) {
+        std::cout << "未找到该作者的文献记录。\n";
         return;
     }
 
-    std::vector<std::uint64_t> encoded_edges;
-    encoded_edges.reserve(std::min<std::size_t>(forward_index_.size() * 2, 32u * 1024u * 1024u));
+    StringArena local_norm_arena(256u * 1024u);
+    std::unordered_map<std::string_view, int> local_id;
+    local_id.reserve(512);
+    local_id.emplace(target_key, 0);
+    std::vector<std::vector<int>> target_docs_ids;
+    target_docs_ids.reserve(plist->size());
 
-    std::uint64_t papers_with_authors = 0;
-    std::uint64_t skipped_large_papers = 0;
-    std::size_t max_authors_seen = 0;
-    for (const Document& doc : forward_index_) {
+    for (const Posting& po : *plist) {
+        if (po.doc_id >= forward_index_.size()) {
+            continue;
+        }
+        const Document& doc = forward_index_[po.doc_id];
         if (doc.authors.empty()) {
             continue;
         }
-        std::vector<std::uint32_t> ids;
-        ids.reserve(8);
+
+        std::vector<int> doc_ids;
+        doc_ids.reserve(16);
+        bool contains_target = false;
         for_each_author_segment(doc.authors, [&](const std::string_view seg) {
             const std::string_view trimmed = trim_sv(seg);
             if (trimmed.empty()) {
                 return;
             }
-            const std::vector<std::string_view> toks = Analyzer::normalize_and_tokenize(trimmed, query_arena_);
-            if (toks.empty()) {
+            const std::string_view nk = normalized_span(local_norm_arena, trimmed);
+            if (nk.empty()) {
                 return;
             }
-            const char* const beg = toks.front().data();
-            const char* const ed = toks.back().data() + toks.back().size();
-            const std::string_view key{beg, static_cast<std::size_t>(ed - beg)};
-            const auto it = author_id.find(key);
-            if (it != author_id.end()) {
-                ids.push_back(it->second);
+            auto it = local_id.find(nk);
+            int id = 0;
+            if (it == local_id.end()) {
+                id = static_cast<int>(local_id.size());
+                local_id.emplace(nk, id);
+            } else {
+                id = it->second;
+            }
+            doc_ids.push_back(id);
+            if (id == 0) {
+                contains_target = true;
             }
         });
-        if (ids.empty()) {
+        if (!contains_target || doc_ids.empty()) {
             continue;
         }
-        ++papers_with_authors;
-        std::sort(ids.begin(), ids.end());
-        ids.erase(std::unique(ids.begin(), ids.end()), ids.end());
-        max_authors_seen = std::max(max_authors_seen, ids.size());
-        if (ids.size() > kMaxAuthorsPerPaper) {
-            ++skipped_large_papers;
-            ids.resize(kMaxAuthorsPerPaper);
+        std::sort(doc_ids.begin(), doc_ids.end());
+        doc_ids.erase(std::unique(doc_ids.begin(), doc_ids.end()), doc_ids.end());
+        target_docs_ids.push_back(std::move(doc_ids));
+    }
+
+    const int n = static_cast<int>(local_id.size());
+    std::cout << "[局部网络] 节点数=" << n << "，目标作者论文数=" << plist->size() << '\n';
+    if (n < 3) {
+        std::cout << "节点数不足 3，无法形成规模 >= 3 的极大完全子图。\n";
+        return;
+    }
+
+    using Bitset = std::vector<std::uint64_t>;
+    const std::size_t words = static_cast<std::size_t>((n + 63) / 64);
+    std::vector<Bitset> adj(static_cast<std::size_t>(n), Bitset(words, 0ULL));
+    auto set_bit = [](Bitset& bits, const int v) {
+        bits[static_cast<std::size_t>(v >> 6)] |= (1ULL << static_cast<unsigned>(v & 63));
+    };
+    auto clear_bit = [](Bitset& bits, const int v) {
+        bits[static_cast<std::size_t>(v >> 6)] &= ~(1ULL << static_cast<unsigned>(v & 63));
+    };
+    auto bitset_empty = [](const Bitset& bits) {
+        for (const std::uint64_t w : bits) {
+            if (w != 0ULL) {
+                return false;
+            }
+        }
+        return true;
+    };
+    auto bitset_or = [words](const Bitset& a, const Bitset& b) {
+        Bitset outv(words, 0ULL);
+        for (std::size_t i = 0; i < words; ++i) {
+            outv[i] = a[i] | b[i];
+        }
+        return outv;
+    };
+    auto bitset_and = [words](const Bitset& a, const Bitset& b) {
+        Bitset outv(words, 0ULL);
+        for (std::size_t i = 0; i < words; ++i) {
+            outv[i] = a[i] & b[i];
+        }
+        return outv;
+    };
+    auto bitset_and_not = [words](const Bitset& a, const Bitset& b) {
+        Bitset outv(words, 0ULL);
+        for (std::size_t i = 0; i < words; ++i) {
+            outv[i] = a[i] & ~b[i];
+        }
+        return outv;
+    };
+    auto popcount_intersection = [words](const Bitset& a, const Bitset& b) {
+        int cnt = 0;
+        for (std::size_t i = 0; i < words; ++i) {
+            cnt += static_cast<int>(std::popcount(a[i] & b[i]));
+        }
+        return cnt;
+    };
+    auto for_each_set_bit = [n](const Bitset& bits, auto&& fn) {
+        for (std::size_t wi = 0; wi < bits.size(); ++wi) {
+            std::uint64_t word = bits[wi];
+            while (word != 0ULL) {
+                const unsigned tz = static_cast<unsigned>(std::countr_zero(word));
+                const int v = static_cast<int>(wi * 64 + tz);
+                if (v < n) {
+                    fn(v);
+                }
+                word &= (word - 1ULL);
+            }
+        }
+    };
+
+    for (const std::vector<int>& ids : target_docs_ids) {
+        if (ids.size() < 2) {
+            continue;
         }
         for (std::size_t i = 0; i < ids.size(); ++i) {
             for (std::size_t j = i + 1; j < ids.size(); ++j) {
-                const std::uint32_t u = ids[i];
-                const std::uint32_t v = ids[j];
-                const std::uint32_t a = std::min(u, v);
-                const std::uint32_t b = std::max(u, v);
-                encoded_edges.push_back((static_cast<std::uint64_t>(a) << 32u) | b);
+                const int u = ids[i];
+                const int v = ids[j];
+                set_bit(adj[static_cast<std::size_t>(u)], v);
+                set_bit(adj[static_cast<std::size_t>(v)], u);
             }
         }
-        query_arena_.reset();
     }
 
-    std::sort(encoded_edges.begin(), encoded_edges.end());
-    encoded_edges.erase(std::unique(encoded_edges.begin(), encoded_edges.end()), encoded_edges.end());
-    std::vector<std::vector<std::uint32_t>> adj(author_count);
-    for (const std::uint64_t e : encoded_edges) {
-        const std::uint32_t u = static_cast<std::uint32_t>(e >> 32u);
-        const std::uint32_t v = static_cast<std::uint32_t>(e);
-        adj[u].push_back(v);
-        adj[v].push_back(u);
+    std::map<int, unsigned long long, std::greater<int>> maximal_counts;
+    std::function<void(int, Bitset, Bitset)> bron_kerbosch;
+    bron_kerbosch = [&](const int clique_size, Bitset p, Bitset x) {
+        if (bitset_empty(p) && bitset_empty(x)) {
+            if (clique_size >= 3) {
+                ++maximal_counts[clique_size];
+            }
+            return;
+        }
+
+        int pivot = -1;
+        int max_deg_in_p = -1;
+        const Bitset px = bitset_or(p, x);
+        for_each_set_bit(px, [&](const int u) {
+            const int deg = popcount_intersection(p, adj[static_cast<std::size_t>(u)]);
+            if (deg > max_deg_in_p) {
+                max_deg_in_p = deg;
+                pivot = u;
+            }
+        });
+
+        Bitset candidates = (pivot == -1) ? p : bitset_and_not(p, adj[static_cast<std::size_t>(pivot)]);
+        for_each_set_bit(candidates, [&](const int v) {
+            const Bitset p_next = bitset_and(p, adj[static_cast<std::size_t>(v)]);
+            const Bitset x_next = bitset_and(x, adj[static_cast<std::size_t>(v)]);
+            bron_kerbosch(clique_size + 1, p_next, x_next);
+            clear_bit(p, v);
+            set_bit(x, v);
+        });
+    };
+
+    Bitset p = adj[0];
+    Bitset x(words, 0ULL);
+    clear_bit(p, 0);
+    bron_kerbosch(1, std::move(p), std::move(x));
+
+    std::cout << "[作者] " << target_key << '\n';
+    std::cout << "[说明] 这是包含目标作者的局部极大完全子图统计，不等同于所有子聚团数量。\n";
+    if (maximal_counts.empty()) {
+        std::cout << "未找到包含目标作者且规模 >= 3 的极大聚团。\n";
+    } else {
+        for (const auto& kv : maximal_counts) {
+            std::cout << kv.first << " 阶局部极大聚团: " << kv.second << '\n';
+        }
+        std::cout << "[最大局部极大聚团阶数] " << maximal_counts.begin()->first << '\n';
     }
-    for (std::vector<std::uint32_t>& nbrs : adj) {
-        std::sort(nbrs.begin(), nbrs.end());
+    const auto t1 = std::chrono::steady_clock::now();
+    const auto total_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+    std::cout << "[计时] F6 作者局部极大聚团分析耗时: " << total_ms << " ms\n";
+}
+
+void ExtremeEngine::execute_f6_global_ranking() const {
+    const auto t0 = std::chrono::steady_clock::now();
+
+    constexpr std::size_t kMaxAuthorsPerPaper = 64;
+    constexpr unsigned long long kCountSaturation = std::numeric_limits<unsigned long long>::max();
+    constexpr std::uint32_t kParticipationMaxOrder = 8;
+
+    std::cout << "========== F6 聚团分析 ==========\n";
+    std::cout << " [1] 全图各阶聚团统计\n";
+    std::cout << " [2] 查询作者参与的各阶聚团数量\n";
+    std::cout << " [3] 查询作者局部极大聚团分析\n";
+    std::cout << "请选择子功能 [1-3，默认1]: " << std::flush;
+    std::string f6_choice_line;
+    std::getline(std::cin >> std::ws, f6_choice_line);
+    const bool author_participation_mode = trim_sv(f6_choice_line) == "2";
+    const bool local_maximal_mode = trim_sv(f6_choice_line) == "3";
+    std::string target_author_raw;
+    if (author_participation_mode || local_maximal_mode) {
+        std::cout << "请输入作者姓名: " << std::flush;
+        std::getline(std::cin >> std::ws, target_author_raw);
+        if (trim_sv(target_author_raw).empty()) {
+            std::cout << "输入为空，已取消作者聚团分析。\n";
+            return;
+        }
+    }
+    std::cout << (local_maximal_mode ? "========== F6 作者局部极大聚团分析 ==========\n"
+                  : author_participation_mode ? "========== F6 作者聚团参与统计 ==========\n"
+                                              : "========== F6 全图聚团统计 ==========\n");
+    if (local_maximal_mode) {
+        execute_f6_author_local_maximal_cliques(target_author_raw);
+        return;
+    }
+    std::uint32_t requested_max_order = kParticipationMaxOrder;
+    if (!author_participation_mode) {
+        std::cout << "请输入最大统计阶数 [默认8，建议8-12]: " << std::flush;
+        std::string max_order_line;
+        std::getline(std::cin >> std::ws, max_order_line);
+        const std::string_view max_order_sv = trim_sv(max_order_line);
+        if (!max_order_sv.empty()) {
+            try {
+                const unsigned long parsed = std::stoul(std::string(max_order_sv));
+                requested_max_order =
+                    static_cast<std::uint32_t>(std::clamp<unsigned long>(parsed, 2UL, 128UL));
+            } catch (const std::exception&) {
+                std::cout << "[提示] 最大阶数输入无效，使用默认值 8。\n";
+                requested_max_order = kParticipationMaxOrder;
+            }
+        }
+    }
+    std::cout << "[模式] Degeneracy Ordering + DAG 重定向 + 递归有序交集，统计到 "
+              << requested_max_order << " 阶。\n";
+
+    std::vector<std::uint64_t> encoded_edges;
+    std::vector<std::string> author_names;
+    std::uint32_t author_count = 0;
+    std::uint64_t papers_with_authors = 0;
+    std::uint64_t skipped_large_papers = 0;
+    std::size_t max_authors_seen = 0;
+    std::vector<std::array<unsigned long long, kParticipationMaxOrder + 1>> cached_author_participation;
+    bool author_participation_cache_loaded = false;
+
+    const auto try_load_f6_graph = [&]() {
+        namespace fs = std::filesystem;
+        const fs::path seg_path = locate_f6_collab_graph_file_path();
+        std::error_code ec;
+        if (!fs::exists(seg_path, ec) || ec) {
+            return false;
+        }
+        std::ifstream in(seg_path, std::ios::binary);
+        if (!in.is_open()) {
+            return false;
+        }
+        std::array<char, 8> magic{};
+        in.read(magic.data(), static_cast<std::streamsize>(magic.size()));
+        if (!in || std::string_view(magic.data(), magic.size()) != std::string_view("DBLPF6G\0", 8)) {
+            return false;
+        }
+        std::uint32_t version = 0;
+        in.read(reinterpret_cast<char*>(&version), sizeof(version));
+        if (!in || version != 2u) {
+            return false;
+        }
+        std::uint64_t docs = 0;
+        std::uint64_t author_total = 0;
+        std::uint64_t edge_total = 0;
+        std::uint64_t max_authors_total = 0;
+        if (!read_varuint64(in, docs) ||
+            !read_varuint64(in, author_total) ||
+            !read_varuint64(in, papers_with_authors) ||
+            !read_varuint64(in, skipped_large_papers) ||
+            !read_varuint64(in, max_authors_total) ||
+            !read_varuint64(in, edge_total)) {
+            return false;
+        }
+        if (docs != forward_index_.size() || author_total > std::numeric_limits<std::uint32_t>::max()) {
+            return false;
+        }
+        author_count = static_cast<std::uint32_t>(author_total);
+        max_authors_seen = static_cast<std::size_t>(max_authors_total);
+        author_names.clear();
+        author_names.reserve(author_count);
+        StringArena cache_read_arena(4u * 1024u * 1024u);
+        for (std::uint32_t i = 0; i < author_count; ++i) {
+            std::string_view name_sv;
+            if (!read_segment_string(in, cache_read_arena, name_sv)) {
+                return false;
+            }
+            author_names.emplace_back(name_sv);
+        }
+        encoded_edges.clear();
+        encoded_edges.reserve(static_cast<std::size_t>(edge_total));
+        for (std::uint64_t i = 0; i < edge_total; ++i) {
+            std::uint64_t e = 0;
+            if (!read_varuint64(in, e)) {
+                return false;
+            }
+            encoded_edges.push_back(e);
+        }
+        if (!in && !in.eof()) {
+            return false;
+        }
+        std::cout << "[F6缓存] 已加载合作图缓存: " << seg_path << '\n';
+        return true;
+    };
+
+    const auto save_f6_graph = [&]() {
+        namespace fs = std::filesystem;
+        const fs::path seg_path = locate_f6_collab_graph_file_path();
+        std::error_code ec;
+        fs::create_directories(seg_path.parent_path(), ec);
+        if (ec) {
+            std::cerr << "[F6缓存] 无法创建缓存目录: " << seg_path.parent_path() << " | " << ec.message() << '\n';
+            return;
+        }
+        const fs::path tmp_path = seg_path.string() + ".tmp";
+        std::ofstream out_file(tmp_path, std::ios::binary | std::ios::trunc);
+        if (!out_file.is_open()) {
+            std::cerr << "[F6缓存] 无法写入缓存: " << tmp_path << '\n';
+            return;
+        }
+        static constexpr std::array<char, 8> kMagic = {'D', 'B', 'L', 'P', 'F', '6', 'G', '\0'};
+        const std::uint32_t version = 2u;
+        out_file.write(kMagic.data(), static_cast<std::streamsize>(kMagic.size()));
+        out_file.write(reinterpret_cast<const char*>(&version), sizeof(version));
+        write_varuint64(out_file, static_cast<std::uint64_t>(forward_index_.size()));
+        write_varuint64(out_file, author_count);
+        write_varuint64(out_file, papers_with_authors);
+        write_varuint64(out_file, skipped_large_papers);
+        write_varuint64(out_file, static_cast<std::uint64_t>(max_authors_seen));
+        write_varuint64(out_file, static_cast<std::uint64_t>(encoded_edges.size()));
+        for (const std::string& name : author_names) {
+            write_segment_string(out_file, name);
+        }
+        for (const std::uint64_t e : encoded_edges) {
+            write_varuint64(out_file, e);
+        }
+        out_file.flush();
+        out_file.close();
+        if (!out_file) {
+            std::cerr << "[F6缓存] 写入缓存失败: " << tmp_path << '\n';
+            return;
+        }
+        fs::rename(tmp_path, seg_path, ec);
+        if (ec) {
+            fs::remove(seg_path, ec);
+            ec.clear();
+            fs::rename(tmp_path, seg_path, ec);
+        }
+        if (ec) {
+            fs::remove(tmp_path, ec);
+            std::cerr << "[F6缓存] 无法替换缓存: " << seg_path << '\n';
+            return;
+        }
+        std::cout << "[F6缓存] 合作图缓存已保存: " << seg_path << '\n';
+    };
+
+    if (!try_load_f6_graph()) {
+        std::unordered_map<std::string_view, std::uint32_t> author_id;
+        author_id.reserve(author_global_.size() * 2 + 1);
+        std::uint32_t next_id = 0;
+        author_global_.for_each([&](const std::string_view author, const std::vector<Posting>&) {
+            if (!author.empty()) {
+                author_id.emplace(author, next_id++);
+                author_names.emplace_back(author);
+            }
+        });
+        author_count = next_id;
+        if (author_count == 0) {
+            std::cout << "作者图为空。\n";
+            return;
+        }
+
+        encoded_edges.reserve(std::min<std::size_t>(forward_index_.size() * 2, 32u * 1024u * 1024u));
+        for (const Document& doc : forward_index_) {
+            if (doc.authors.empty()) {
+                continue;
+            }
+            std::vector<std::uint32_t> ids;
+            ids.reserve(8);
+            for_each_author_segment(doc.authors, [&](const std::string_view seg) {
+                const std::string_view trimmed = trim_sv(seg);
+                if (trimmed.empty()) {
+                    return;
+                }
+                const std::vector<std::string_view> toks = Analyzer::normalize_and_tokenize(trimmed, query_arena_);
+                if (toks.empty()) {
+                    return;
+                }
+                const char* const beg = toks.front().data();
+                const char* const ed = toks.back().data() + toks.back().size();
+                const std::string_view key{beg, static_cast<std::size_t>(ed - beg)};
+                const auto it = author_id.find(key);
+                if (it != author_id.end()) {
+                    ids.push_back(it->second);
+                }
+            });
+            if (ids.empty()) {
+                continue;
+            }
+            ++papers_with_authors;
+            std::sort(ids.begin(), ids.end());
+            ids.erase(std::unique(ids.begin(), ids.end()), ids.end());
+            max_authors_seen = std::max(max_authors_seen, ids.size());
+            if (ids.size() > kMaxAuthorsPerPaper) {
+                ++skipped_large_papers;
+                ids.resize(kMaxAuthorsPerPaper);
+            }
+            for (std::size_t i = 0; i < ids.size(); ++i) {
+                for (std::size_t j = i + 1; j < ids.size(); ++j) {
+                    const std::uint32_t u = ids[i];
+                    const std::uint32_t v = ids[j];
+                    const std::uint32_t a = std::min(u, v);
+                    const std::uint32_t b = std::max(u, v);
+                    encoded_edges.push_back((static_cast<std::uint64_t>(a) << 32u) | b);
+                }
+            }
+            query_arena_.reset();
+        }
+
+        std::sort(encoded_edges.begin(), encoded_edges.end());
+        encoded_edges.erase(std::unique(encoded_edges.begin(), encoded_edges.end()), encoded_edges.end());
+        save_f6_graph();
     }
 
+    if (author_count == 0) {
+        std::cout << "作者图为空。\n";
+        return;
+    }
+
+    auto try_load_author_participation_cache = [&]() {
+        namespace fs = std::filesystem;
+        const fs::path seg_path = locate_f6_author_participation_file_path();
+        std::error_code ec;
+        if (!fs::exists(seg_path, ec) || ec) {
+            return false;
+        }
+        std::ifstream in(seg_path, std::ios::binary);
+        if (!in.is_open()) {
+            return false;
+        }
+        std::array<char, 8> magic{};
+        in.read(magic.data(), static_cast<std::streamsize>(magic.size()));
+        if (!in || std::string_view(magic.data(), magic.size()) != std::string_view("DBLPF6P\0", 8)) {
+            return false;
+        }
+        std::uint32_t version = 0;
+        in.read(reinterpret_cast<char*>(&version), sizeof(version));
+        if (!in || version != 1u) {
+            return false;
+        }
+        std::uint64_t docs = 0;
+        std::uint64_t authors = 0;
+        std::uint32_t max_order = 0;
+        if (!read_varuint64(in, docs) || !read_varuint64(in, authors) || !read_varuint32(in, max_order)) {
+            return false;
+        }
+        if (docs != forward_index_.size() || authors != author_count || max_order != kParticipationMaxOrder) {
+            return false;
+        }
+        cached_author_participation.assign(author_count, {});
+        for (std::uint32_t aid = 0; aid < author_count; ++aid) {
+            for (std::uint32_t order = 1; order <= kParticipationMaxOrder; ++order) {
+                std::uint64_t value = 0;
+                if (!read_varuint64(in, value)) {
+                    cached_author_participation.clear();
+                    return false;
+                }
+                cached_author_participation[aid][order] = value;
+            }
+        }
+        std::cout << "[F6缓存] 已加载作者聚团参与统计缓存: " << seg_path << '\n';
+        return true;
+    };
+
+    auto save_author_participation_cache =
+        [&](const std::vector<std::array<unsigned long long, kParticipationMaxOrder + 1>>& counts) {
+            namespace fs = std::filesystem;
+            const fs::path seg_path = locate_f6_author_participation_file_path();
+            std::error_code ec;
+            fs::create_directories(seg_path.parent_path(), ec);
+            if (ec) {
+                std::cerr << "[F6缓存] 无法创建作者参与统计缓存目录: " << seg_path.parent_path()
+                          << " | " << ec.message() << '\n';
+                return;
+            }
+            const fs::path tmp_path = seg_path.string() + ".tmp";
+            std::ofstream out_file(tmp_path, std::ios::binary | std::ios::trunc);
+            if (!out_file.is_open()) {
+                std::cerr << "[F6缓存] 无法写入作者参与统计缓存: " << tmp_path << '\n';
+                return;
+            }
+            static constexpr std::array<char, 8> kMagic = {'D', 'B', 'L', 'P', 'F', '6', 'P', '\0'};
+            const std::uint32_t version = 1u;
+            out_file.write(kMagic.data(), static_cast<std::streamsize>(kMagic.size()));
+            out_file.write(reinterpret_cast<const char*>(&version), sizeof(version));
+            write_varuint64(out_file, static_cast<std::uint64_t>(forward_index_.size()));
+            write_varuint64(out_file, author_count);
+            write_varuint32(out_file, kParticipationMaxOrder);
+            for (const auto& per_author : counts) {
+                for (std::uint32_t order = 1; order <= kParticipationMaxOrder; ++order) {
+                    write_varuint64(out_file, per_author[order]);
+                }
+            }
+            out_file.flush();
+            out_file.close();
+            if (!out_file) {
+                std::cerr << "[F6缓存] 写入作者参与统计缓存失败: " << tmp_path << '\n';
+                return;
+            }
+            fs::rename(tmp_path, seg_path, ec);
+            if (ec) {
+                fs::remove(seg_path, ec);
+                ec.clear();
+                fs::rename(tmp_path, seg_path, ec);
+            }
+            if (ec) {
+                fs::remove(tmp_path, ec);
+                std::cerr << "[F6缓存] 无法替换作者参与统计缓存: " << seg_path << '\n';
+                return;
+            }
+            std::cout << "[F6缓存] 作者聚团参与统计缓存已保存: " << seg_path << '\n';
+        };
+
+    author_participation_cache_loaded = try_load_author_participation_cache();
     std::vector<std::uint32_t> core_degree(author_count, 0u);
     for (const std::uint64_t e : encoded_edges) {
         const std::uint32_t u = static_cast<std::uint32_t>(e >> 32u);
         const std::uint32_t v = static_cast<std::uint32_t>(e);
         ++core_degree[u];
         ++core_degree[v];
+    }
+    std::vector<std::uint64_t> adj_offsets(static_cast<std::size_t>(author_count) + 1, 0u);
+    for (std::uint32_t v = 0; v < author_count; ++v) {
+        adj_offsets[static_cast<std::size_t>(v) + 1] =
+            adj_offsets[static_cast<std::size_t>(v)] + core_degree[v];
+    }
+    std::vector<std::uint32_t> adj_neighbors(static_cast<std::size_t>(adj_offsets.back()));
+    std::vector<std::uint64_t> cursor = adj_offsets;
+    for (const std::uint64_t e : encoded_edges) {
+        const std::uint32_t u = static_cast<std::uint32_t>(e >> 32u);
+        const std::uint32_t v = static_cast<std::uint32_t>(e);
+        adj_neighbors[static_cast<std::size_t>(cursor[u]++)] = v;
+        adj_neighbors[static_cast<std::size_t>(cursor[v]++)] = u;
     }
 
     using DegNode = std::pair<std::uint32_t, std::uint32_t>;
@@ -4504,7 +5034,10 @@ void ExtremeEngine::execute_f6_global_ranking() const {
         removed[v] = 1u;
         rank[v] = rank_next++;
         degeneracy = std::max(degeneracy, deg);
-        for (const std::uint32_t nb : adj[v]) {
+        const std::uint64_t beg = adj_offsets[v];
+        const std::uint64_t end = adj_offsets[static_cast<std::size_t>(v) + 1];
+        for (std::uint64_t i = beg; i < end; ++i) {
+            const std::uint32_t nb = adj_neighbors[static_cast<std::size_t>(i)];
             if (removed[nb] == 0u && core_degree[nb] > 0u) {
                 --core_degree[nb];
                 peel_heap.push({core_degree[nb], nb});
@@ -4522,12 +5055,316 @@ void ExtremeEngine::execute_f6_global_ranking() const {
             out[v].push_back(u);
         }
     }
-    adj.clear();
-    adj.shrink_to_fit();
+    adj_offsets.clear();
+    adj_offsets.shrink_to_fit();
+    adj_neighbors.clear();
+    adj_neighbors.shrink_to_fit();
     for (std::vector<std::uint32_t>& nbrs : out) {
         std::sort(nbrs.begin(), nbrs.end(), [&](const std::uint32_t a, const std::uint32_t b) {
             return rank[a] < rank[b];
         });
+    }
+
+    auto intersect_by_rank = [&](const std::vector<std::uint32_t>& a, const std::vector<std::uint32_t>& b) {
+        std::vector<std::uint32_t> outv;
+        outv.reserve(std::min(a.size(), b.size()));
+        auto ia = a.begin();
+        auto ib = b.begin();
+        while (ia != a.end() && ib != b.end()) {
+            const std::uint32_t va = *ia;
+            const std::uint32_t vb = *ib;
+            if (va == vb) {
+                outv.push_back(va);
+                ++ia;
+                ++ib;
+            } else if (rank[va] < rank[vb]) {
+                ++ia;
+            } else {
+                ++ib;
+            }
+        }
+        return outv;
+    };
+
+    auto add_count_saturated = [&](std::vector<unsigned long long>& counts, std::vector<std::uint8_t>& sat,
+                                   const std::uint32_t order, const unsigned long long delta) {
+        if (order >= counts.size()) {
+            counts.resize(static_cast<std::size_t>(order) + 1, 0ULL);
+            sat.resize(static_cast<std::size_t>(order) + 1, 0u);
+        }
+        if (kCountSaturation - counts[order] < delta) {
+            counts[order] = kCountSaturation;
+            sat[order] = 1u;
+        } else {
+            counts[order] += delta;
+        }
+    };
+
+    std::uint32_t oriented_max_out_degree = 0;
+    for (const std::vector<std::uint32_t>& nbrs : out) {
+        oriented_max_out_degree =
+            std::max<std::uint32_t>(oriented_max_out_degree, static_cast<std::uint32_t>(nbrs.size()));
+    }
+
+    auto print_global_clique_counts = [&](const std::vector<unsigned long long>& clique_counts,
+                                          const std::vector<std::uint8_t>& saturated_flags) {
+        std::cout << "[图信息] 作者数=" << author_count
+                  << " 含作者论文数=" << papers_with_authors
+                  << " 合作边数=" << encoded_edges.size() << '\n';
+        std::cout << "[图信息] 单篇最大作者数=" << max_authors_seen
+                  << " 被截断的大作者论文数=" << skipped_large_papers
+                  << " degeneracy=" << degeneracy
+                  << " 定向最大出度=" << oriented_max_out_degree << '\n';
+        std::cout << "[统计结果] 统计所有完全子图，不只是极大聚团\n";
+        std::uint32_t max_order = 0;
+        const std::uint32_t upper =
+            std::min<std::uint32_t>(requested_max_order, static_cast<std::uint32_t>(clique_counts.size() - 1));
+        for (std::uint32_t k = 1; k <= upper; ++k) {
+            if (clique_counts[k] != 0ULL) {
+                max_order = k;
+            }
+        }
+        for (std::uint32_t k = 1; k <= max_order; ++k) {
+            std::cout << k << " 阶聚团: " << clique_counts[k];
+            if (k < saturated_flags.size() && saturated_flags[k] != 0u) {
+                std::cout << "（已饱和）";
+            }
+            std::cout << '\n';
+        }
+        std::cout << "[最大已统计阶数] " << max_order << '\n';
+        std::cout << "[统计阶数上限] " << requested_max_order << '\n';
+    };
+
+    auto try_load_global_clique_counts_cache = [&](std::vector<unsigned long long>& counts,
+                                                  std::vector<std::uint8_t>& sat) {
+        namespace fs = std::filesystem;
+        const fs::path seg_path = locate_f6_global_clique_counts_file_path(requested_max_order);
+        std::error_code ec;
+        if (!fs::exists(seg_path, ec) || ec) {
+            return false;
+        }
+        std::ifstream in(seg_path, std::ios::binary);
+        if (!in.is_open()) {
+            return false;
+        }
+        std::array<char, 8> magic{};
+        in.read(magic.data(), static_cast<std::streamsize>(magic.size()));
+        if (!in || std::string_view(magic.data(), magic.size()) != std::string_view("DBLPF6C\0", 8)) {
+            return false;
+        }
+        std::uint32_t version = 0;
+        in.read(reinterpret_cast<char*>(&version), sizeof(version));
+        if (!in || version != 1u) {
+            return false;
+        }
+        std::uint64_t docs = 0;
+        std::uint64_t authors = 0;
+        std::uint64_t edges = 0;
+        std::uint64_t papers = 0;
+        std::uint64_t skipped = 0;
+        std::uint64_t max_authors = 0;
+        std::uint32_t cached_max_order = 0;
+        std::uint32_t cached_degeneracy = 0;
+        std::uint32_t cached_oriented_max_out = 0;
+        if (!read_varuint64(in, docs) ||
+            !read_varuint64(in, authors) ||
+            !read_varuint64(in, edges) ||
+            !read_varuint64(in, papers) ||
+            !read_varuint64(in, skipped) ||
+            !read_varuint64(in, max_authors) ||
+            !read_varuint32(in, cached_max_order) ||
+            !read_varuint32(in, cached_degeneracy) ||
+            !read_varuint32(in, cached_oriented_max_out)) {
+            return false;
+        }
+        if (docs != forward_index_.size() ||
+            authors != author_count ||
+            edges != encoded_edges.size() ||
+            papers != papers_with_authors ||
+            skipped != skipped_large_papers ||
+            max_authors != max_authors_seen ||
+            cached_max_order != requested_max_order) {
+            return false;
+        }
+        degeneracy = cached_degeneracy;
+        oriented_max_out_degree = cached_oriented_max_out;
+        counts.assign(static_cast<std::size_t>(requested_max_order) + 1u, 0ULL);
+        sat.assign(static_cast<std::size_t>(requested_max_order) + 1u, 0u);
+        for (std::uint32_t order = 1; order <= requested_max_order; ++order) {
+            std::uint64_t value = 0;
+            std::uint32_t saturated_flag = 0;
+            if (!read_varuint64(in, value) || !read_varuint32(in, saturated_flag)) {
+                counts.clear();
+                sat.clear();
+                return false;
+            }
+            counts[order] = value;
+            sat[order] = saturated_flag == 0u ? 0u : 1u;
+        }
+        std::cout << "[F6缓存] 已加载全图聚团统计缓存: " << seg_path << '\n';
+        return true;
+    };
+
+    auto save_global_clique_counts_cache = [&](const std::vector<unsigned long long>& counts,
+                                               const std::vector<std::uint8_t>& sat) {
+        namespace fs = std::filesystem;
+        const fs::path seg_path = locate_f6_global_clique_counts_file_path(requested_max_order);
+        std::error_code ec;
+        fs::create_directories(seg_path.parent_path(), ec);
+        if (ec) {
+            std::cerr << "[F6缓存] 无法创建全图聚团统计缓存目录: " << seg_path.parent_path()
+                      << " | " << ec.message() << '\n';
+            return;
+        }
+        const fs::path tmp_path = seg_path.string() + ".tmp";
+        std::ofstream out_file(tmp_path, std::ios::binary | std::ios::trunc);
+        if (!out_file.is_open()) {
+            std::cerr << "[F6缓存] 无法写入全图聚团统计缓存: " << tmp_path << '\n';
+            return;
+        }
+        static constexpr std::array<char, 8> kMagic = {'D', 'B', 'L', 'P', 'F', '6', 'C', '\0'};
+        const std::uint32_t version = 1u;
+        out_file.write(kMagic.data(), static_cast<std::streamsize>(kMagic.size()));
+        out_file.write(reinterpret_cast<const char*>(&version), sizeof(version));
+        write_varuint64(out_file, static_cast<std::uint64_t>(forward_index_.size()));
+        write_varuint64(out_file, author_count);
+        write_varuint64(out_file, static_cast<std::uint64_t>(encoded_edges.size()));
+        write_varuint64(out_file, papers_with_authors);
+        write_varuint64(out_file, skipped_large_papers);
+        write_varuint64(out_file, static_cast<std::uint64_t>(max_authors_seen));
+        write_varuint32(out_file, requested_max_order);
+        write_varuint32(out_file, degeneracy);
+        write_varuint32(out_file, oriented_max_out_degree);
+        for (std::uint32_t order = 1; order <= requested_max_order; ++order) {
+            const unsigned long long value = order < counts.size() ? counts[order] : 0ULL;
+            const std::uint32_t saturated_flag = (order < sat.size() && sat[order] != 0u) ? 1u : 0u;
+            write_varuint64(out_file, value);
+            write_varuint32(out_file, saturated_flag);
+        }
+        out_file.flush();
+        out_file.close();
+        if (!out_file) {
+            std::cerr << "[F6缓存] 写入全图聚团统计缓存失败: " << tmp_path << '\n';
+            return;
+        }
+        fs::rename(tmp_path, seg_path, ec);
+        if (ec) {
+            fs::remove(seg_path, ec);
+            ec.clear();
+            fs::rename(tmp_path, seg_path, ec);
+        }
+        if (ec) {
+            fs::remove(tmp_path, ec);
+            std::cerr << "[F6缓存] 无法替换全图聚团统计缓存: " << seg_path << '\n';
+            return;
+        }
+        std::cout << "[F6缓存] 全图聚团统计缓存已保存: " << seg_path << '\n';
+    };
+
+    if (!author_participation_mode) {
+        std::vector<unsigned long long> cached_counts;
+        std::vector<std::uint8_t> cached_saturated;
+        if (try_load_global_clique_counts_cache(cached_counts, cached_saturated)) {
+            print_global_clique_counts(cached_counts, cached_saturated);
+            const auto t1 = std::chrono::steady_clock::now();
+            const auto total_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+            std::cout << "[计时] F6 执行总耗时: " << total_ms << " ms\n";
+            return;
+        }
+    }
+
+    if (author_participation_mode) {
+        const std::string_view target_key = build_normalized_lookup_key(target_author_raw);
+        if (target_key.empty()) {
+            std::cout << "查询无效（无法规范化目标作者）。\n";
+            return;
+        }
+        const auto name_it = std::find(author_names.begin(), author_names.end(), std::string(target_key));
+        if (name_it == author_names.end()) {
+            std::cout << "未找到该作者。\n";
+            return;
+        }
+        const std::uint32_t target_id = static_cast<std::uint32_t>(std::distance(author_names.begin(), name_it));
+        if (author_participation_cache_loaded && target_id < cached_author_participation.size()) {
+            const auto& cached_counts = cached_author_participation[target_id];
+            std::uint32_t max_cached_order = 0;
+            for (std::uint32_t k = 1; k <= kParticipationMaxOrder; ++k) {
+                if (cached_counts[k] != 0ULL) {
+                    max_cached_order = k;
+                }
+            }
+            std::cout << "[作者] " << *name_it << '\n';
+            std::cout << "[说明] 使用预计算缓存，查询阶段只做查表，目标为亚秒级响应。\n";
+            for (std::uint32_t k = 1; k <= max_cached_order; ++k) {
+                std::cout << k << " 阶聚团参与数: " << cached_counts[k] << '\n';
+            }
+            if (max_cached_order == kParticipationMaxOrder) {
+                std::cout << "[提示] 预计算缓存当前统计到 " << kParticipationMaxOrder
+                          << " 阶；更高阶可运行全图长任务扩展缓存。\n";
+            }
+            std::cout << "[最大已缓存参与阶数] " << max_cached_order << '\n';
+            const auto t1 = std::chrono::steady_clock::now();
+            const auto total_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+            std::cout << "[计时] F6 作者聚团参与统计耗时: " << total_ms << " ms\n";
+            return;
+        }
+
+        std::cout << "[提示] 未找到作者聚团参与统计缓存，将使用现场递归兜底；建议先运行 F6 全图统计生成缓存。\n";
+        std::vector<std::uint32_t> target_neighbors;
+        target_neighbors.reserve(core_degree[target_id]);
+        for (const std::uint64_t e : encoded_edges) {
+            const std::uint32_t u = static_cast<std::uint32_t>(e >> 32u);
+            const std::uint32_t v = static_cast<std::uint32_t>(e);
+            if (u == target_id) {
+                target_neighbors.push_back(v);
+            } else if (v == target_id) {
+                target_neighbors.push_back(u);
+            }
+        }
+        std::sort(target_neighbors.begin(), target_neighbors.end(), [&](const std::uint32_t a, const std::uint32_t b) {
+            return rank[a] < rank[b];
+        });
+
+        std::vector<unsigned long long> participation_counts(3, 0ULL);
+        std::vector<std::uint8_t> participation_saturated(3, 0u);
+        participation_counts[1] = 1ULL;
+        participation_counts[2] = static_cast<unsigned long long>(target_neighbors.size());
+
+        std::function<void(std::uint32_t, std::vector<std::uint32_t>&)> count_target_from;
+        count_target_from = [&](const std::uint32_t depth, std::vector<std::uint32_t>& candidates) {
+            if (candidates.empty()) {
+                return;
+            }
+            for (const std::uint32_t v : candidates) {
+                add_count_saturated(participation_counts, participation_saturated, depth + 1, 1ULL);
+                std::vector<std::uint32_t> next = intersect_by_rank(candidates, out[v]);
+                count_target_from(depth + 1, next);
+            }
+        };
+        std::vector<std::uint32_t> seed = target_neighbors;
+        count_target_from(1, seed);
+
+        std::uint32_t max_participation_order = 0;
+        for (std::uint32_t k = 1; k < participation_counts.size(); ++k) {
+            if (participation_counts[k] != 0ULL) {
+                max_participation_order = k;
+            }
+        }
+
+        std::cout << "[作者] " << *name_it << '\n';
+        std::cout << "[说明] 统计该作者参与的各阶完全子图数量。\n";
+        for (std::uint32_t k = 1; k <= max_participation_order; ++k) {
+            std::cout << k << " 阶聚团参与数: " << participation_counts[k];
+            if (k < participation_saturated.size() && participation_saturated[k] != 0u) {
+                std::cout << "（已饱和）";
+            }
+            std::cout << '\n';
+        }
+        std::cout << "[最大参与阶数] " << max_participation_order << '\n';
+        const auto t1 = std::chrono::steady_clock::now();
+        const auto total_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+        std::cout << "[计时] F6 作者聚团参与统计耗时: " << total_ms << " ms\n";
+        return;
     }
 
     const unsigned hw_threads = std::max(1u, std::thread::hardware_concurrency());
@@ -4540,6 +5377,12 @@ void ExtremeEngine::execute_f6_global_ranking() const {
         std::vector<std::uint8_t> saturated{0u, 0u};
     };
     std::vector<ThreadCliqueCounts> thread_counts(worker_count);
+    std::vector<std::mutex> thread_count_mutexes(worker_count);
+    const bool build_author_participation_cache =
+        !author_participation_cache_loaded && requested_max_order >= kParticipationMaxOrder;
+    const std::size_t participation_stride = static_cast<std::size_t>(kParticipationMaxOrder) + 1u;
+    std::vector<std::atomic<unsigned long long>> author_participation_atomic(
+        build_author_participation_cache ? static_cast<std::size_t>(author_count) * participation_stride : 0u);
 
     auto add_local_count = [&](ThreadCliqueCounts& local, const std::uint32_t order, const unsigned long long delta) {
         if (order >= local.counts.size()) {
@@ -4553,9 +5396,24 @@ void ExtremeEngine::execute_f6_global_ranking() const {
             local.counts[order] += delta;
         }
     };
+    auto add_author_participation = [&](const std::uint32_t author, const std::uint32_t order,
+                                        const unsigned long long delta) {
+        if (!build_author_participation_cache || order > kParticipationMaxOrder) {
+            return;
+        }
+        std::atomic<unsigned long long>& cell =
+            author_participation_atomic[static_cast<std::size_t>(author) * participation_stride + order];
+        unsigned long long cur = cell.load(std::memory_order_relaxed);
+        while (cur != kCountSaturation) {
+            const unsigned long long next = (kCountSaturation - cur < delta) ? kCountSaturation : (cur + delta);
+            if (cell.compare_exchange_weak(cur, next, std::memory_order_relaxed, std::memory_order_relaxed)) {
+                break;
+            }
+        }
+    };
 
     auto worker = [&](const unsigned tid) {
-        ThreadCliqueCounts& local = thread_counts[tid];
+        ThreadCliqueCounts local;
         auto intersect_sorted_local = [&](const std::vector<std::uint32_t>& a, const std::vector<std::uint32_t>& b) {
             std::vector<std::uint32_t> outv;
             outv.reserve(std::min(a.size(), b.size()));
@@ -4577,15 +5435,25 @@ void ExtremeEngine::execute_f6_global_ranking() const {
             return outv;
         };
 
+        std::vector<std::uint32_t> clique_vertices;
+        clique_vertices.reserve(64);
         std::function<void(std::uint32_t, std::vector<std::uint32_t>&)> count_from;
         count_from = [&](const std::uint32_t depth, std::vector<std::uint32_t>& candidates) {
-            if (candidates.empty()) {
+            if (candidates.empty() || depth >= requested_max_order) {
                 return;
             }
             for (const std::uint32_t v : candidates) {
                 add_local_count(local, depth + 1, 1ULL);
+                if (depth + 1 <= kParticipationMaxOrder) {
+                    for (const std::uint32_t member : clique_vertices) {
+                        add_author_participation(member, depth + 1, 1ULL);
+                    }
+                    add_author_participation(v, depth + 1, 1ULL);
+                }
+                clique_vertices.push_back(v);
                 std::vector<std::uint32_t> next = intersect_sorted_local(candidates, out[v]);
                 count_from(depth + 1, next);
+                clique_vertices.pop_back();
             }
         };
 
@@ -4597,16 +5465,83 @@ void ExtremeEngine::execute_f6_global_ranking() const {
             const std::uint32_t end = std::min<std::uint32_t>(author_count, begin + kVertexBatch);
             for (std::uint32_t u = begin; u < end; ++u) {
                 std::vector<std::uint32_t> candidates = out[u];
+                add_author_participation(u, 1, 1ULL);
+                for (const std::uint32_t v : candidates) {
+                    add_author_participation(u, 2, 1ULL);
+                    add_author_participation(v, 2, 1ULL);
+                }
+                clique_vertices.clear();
+                clique_vertices.push_back(u);
                 count_from(1, candidates);
             }
+            {
+                std::lock_guard<std::mutex> lock(thread_count_mutexes[tid]);
+                thread_counts[tid] = local;
+            }
+        }
+        {
+            std::lock_guard<std::mutex> lock(thread_count_mutexes[tid]);
+            thread_counts[tid] = local;
         }
     };
 
-    std::cout << "[Parallel] counting_threads=" << worker_count << '\n';
+    std::cout << "[并行] 计数线程数=" << worker_count << '\n';
+    std::cout << "[统计结果] 1 阶聚团: " << author_count << "（最终）\n";
+    std::cout << "[统计结果] 2 阶聚团: " << encoded_edges.size() << "（最终）\n";
     std::vector<std::thread> workers;
     workers.reserve(worker_count);
     for (unsigned tid = 0; tid < worker_count; ++tid) {
         workers.emplace_back(worker, tid);
+    }
+
+    std::vector<unsigned long long> last_progress_counts(3, 0ULL);
+    auto merge_counts_snapshot = [&]() {
+        std::vector<unsigned long long> snapshot(2, 0ULL);
+        std::vector<std::uint8_t> snapshot_saturated(2, 0u);
+        snapshot[1] = author_count;
+        for (unsigned tid = 0; tid < worker_count; ++tid) {
+            std::lock_guard<std::mutex> lock(thread_count_mutexes[tid]);
+            const ThreadCliqueCounts& local = thread_counts[tid];
+            if (local.counts.size() > snapshot.size()) {
+                snapshot.resize(local.counts.size(), 0ULL);
+                snapshot_saturated.resize(local.counts.size(), 0u);
+            }
+            for (std::size_t k = 2; k < local.counts.size(); ++k) {
+                if (local.saturated[k] != 0u || kCountSaturation - snapshot[k] < local.counts[k]) {
+                    snapshot[k] = kCountSaturation;
+                    snapshot_saturated[k] = 1u;
+                } else {
+                    snapshot[k] += local.counts[k];
+                }
+            }
+        }
+        return std::pair{std::move(snapshot), std::move(snapshot_saturated)};
+    };
+
+    while (next_vertex.load(std::memory_order_relaxed) < author_count) {
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        const auto [snapshot, snapshot_saturated] = merge_counts_snapshot();
+        std::uint32_t max_seen_order = 0;
+        const std::uint32_t progress_upper =
+            std::min<std::uint32_t>(requested_max_order, static_cast<std::uint32_t>(snapshot.size() - 1));
+        for (std::uint32_t k = 3; k <= progress_upper; ++k) {
+            if (snapshot[k] != 0ULL) {
+                max_seen_order = k;
+            }
+        }
+        for (std::uint32_t k = 3; k <= max_seen_order; ++k) {
+            if (k >= last_progress_counts.size()) {
+                last_progress_counts.resize(static_cast<std::size_t>(k) + 1, 0ULL);
+            }
+            if (snapshot[k] != last_progress_counts[k]) {
+                std::cout << "[进度] " << k << " 阶聚团当前已发现不少于: " << snapshot[k];
+                if (k < snapshot_saturated.size() && snapshot_saturated[k] != 0u) {
+                    std::cout << "（已饱和）";
+                }
+                std::cout << '\n';
+                last_progress_counts[k] = snapshot[k];
+            }
+        }
     }
     for (std::thread& th : workers) {
         th.join();
@@ -4629,35 +5564,20 @@ void ExtremeEngine::execute_f6_global_ranking() const {
             }
         }
     }
-
-    std::uint32_t oriented_max_out_degree = 0;
-    for (const std::vector<std::uint32_t>& nbrs : out) {
-        oriented_max_out_degree =
-            std::max<std::uint32_t>(oriented_max_out_degree, static_cast<std::uint32_t>(nbrs.size()));
-    }
-
-    std::cout << "[Graph] authors=" << author_count
-              << " papers_with_authors=" << papers_with_authors
-              << " collaboration_edges=" << encoded_edges.size() << '\n';
-    std::cout << "[Graph] max_authors_per_paper_seen=" << max_authors_seen
-              << " skipped_or_truncated_large_papers=" << skipped_large_papers
-              << " degeneracy=" << degeneracy
-              << " oriented_max_out_degree=" << oriented_max_out_degree << '\n';
-    std::cout << "[Counts] all complete subgraphs, not only maximal cliques\n";
-    std::uint32_t max_order = 0;
-    for (std::uint32_t k = 1; k < clique_counts.size(); ++k) {
-        if (clique_counts[k] != 0ULL) {
-            max_order = k;
+    if (build_author_participation_cache) {
+        std::vector<std::array<unsigned long long, kParticipationMaxOrder + 1>> participation_cache(author_count);
+        for (std::uint32_t aid = 0; aid < author_count; ++aid) {
+            for (std::uint32_t order = 1; order <= kParticipationMaxOrder; ++order) {
+                participation_cache[aid][order] =
+                    author_participation_atomic[static_cast<std::size_t>(aid) * participation_stride + order].load(
+                        std::memory_order_relaxed);
+            }
         }
+        save_author_participation_cache(participation_cache);
     }
-    for (std::uint32_t k = 1; k <= max_order; ++k) {
-        std::cout << "Order " << k << ": " << clique_counts[k];
-        if (k < saturated.size() && saturated[k] != 0u) {
-            std::cout << " (saturated)";
-        }
-        std::cout << '\n';
-    }
-    std::cout << "[MaxOrder] " << max_order << '\n';
+
+    save_global_clique_counts_cache(clique_counts, saturated);
+    print_global_clique_counts(clique_counts, saturated);
 
     const auto t1 = std::chrono::steady_clock::now();
     const auto total_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();

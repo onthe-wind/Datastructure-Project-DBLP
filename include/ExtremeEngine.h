@@ -133,6 +133,7 @@ private:
     [[nodiscard]] std::size_t count_or_union_docs(std::vector<F5DaatTermState>& terms) const;
     [[nodiscard]] std::unordered_map<std::string, int> compute_f4_term_counts_for_year(int year) const;
     [[nodiscard]] std::vector<F4HotEntry> compute_f4_top10_for_year(int year) const;
+    void execute_f6_author_local_maximal_cliques(std::string_view target_author_raw) const;
 
     std::vector<std::unique_ptr<LocalIndex>> local_storage_;
     std::vector<Document> forward_index_;

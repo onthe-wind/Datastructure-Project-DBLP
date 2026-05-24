@@ -30,9 +30,9 @@ void print_menu() {
     std::cout << " [4] F5. 组合关键字打分搜索 (BM25)\n";
     std::cout << " [5] F3. 作者统计功能 (架构预留)\n";
     std::cout << " [6] F4. 年度热词分析 (架构预留)\n";
-    std::cout << " [7] F6. 全图聚团统计\n";
+    std::cout << " [7] F6. 聚团分析\n";
     std::cout << " [8] F7. 可视化数据导出 (架构预留)\n";
-    std::cout << " [9] F5. 查询评测集基准 (profiling)\n";
+    std::cout << " [9] F5. 查询评测集基准（profiling）\n";
     std::cout << " [0] 退出系统\n";
     std::cout << "============================================\n";
     std::cout << "请选择功能编号: " << std::flush;
@@ -91,26 +91,26 @@ void print_menu() {
     std::cout << "像 Nature / IEEE Xplore 一样输入关键词或短语；高级选项可直接回车使用默认值。\n";
     std::cout << "示例: graph neural network | \"deep learning\" recommendation\n\n";
 
-    const std::string keywords = trim_copy(read_user_line("Search papers: "));
+    const std::string keywords = trim_copy(read_user_line("请输入论文关键词或短语: "));
     if (keywords.empty()) {
         return {};
     }
 
     std::cout << "\n排序方式:\n";
-    std::cout << " [1] Relevance 相关度优先（默认）\n";
-    std::cout << " [2] Newest 最新年份优先\n";
+    std::cout << " [1] 相关度优先（默认）\n";
+    std::cout << " [2] 最新年份优先\n";
     const int sort = read_option_or_default("请选择排序 [1-2，默认1]: ", 1, 1, 2);
 
     std::cout << "\n匹配方式:\n";
-    std::cout << " [1] Smart 智能匹配（默认，宽召回 + BM25 排名）\n";
-    std::cout << " [2] All terms 必须包含所有关键词\n";
-    std::cout << " [3] Any terms 任意关键词即可\n";
+    std::cout << " [1] 智能匹配（默认，宽召回 + BM25 排名）\n";
+    std::cout << " [2] 必须包含所有关键词\n";
+    std::cout << " [3] 任意关键词即可\n";
     const int match_mode = read_option_or_default("请选择匹配方式 [1-3，默认1]: ", 1, 1, 3);
 
     std::cout << "\n容错搜索:\n";
-    std::cout << " [1] Auto 自动纠错（默认）\n";
-    std::cout << " [2] Off 关闭纠错\n";
-    std::cout << " [3] Broad 更宽松纠错\n";
+    std::cout << " [1] 自动纠错（默认）\n";
+    std::cout << " [2] 关闭纠错\n";
+    std::cout << " [3] 更宽松纠错\n";
     const int fuzzy = read_option_or_default("请选择容错级别 [1-3，默认1]: ", 1, 1, 3);
 
     std::cout << "\n每页结果数:\n";
@@ -190,15 +190,15 @@ int main(int argc, char* argv[]) {
             if (loaded_from_segment) {
                 const double load_sec =
                     std::chrono::duration<double>(t_load_done - t_load_begin).count();
-                std::cout << "\n[WarmStart] 已加载完整 serving segment，耗时: " << load_sec << " 秒\n";
+                std::cout << "\n[WarmStart] 已加载完整服务段，耗时: " << load_sec << " 秒\n";
             }
         }
 
         if (!loaded_from_segment) {
             if (rebuild_mode) {
-                std::cout << "[WarmStart] --rebuild 已启用，跳过 serving segment。\n";
+                std::cout << "[WarmStart] --rebuild 已启用，跳过服务段。\n";
             } else {
-                std::cout << "[WarmStart] 未找到或无法加载 serving segment，回退到 XML 构建。\n";
+                std::cout << "[WarmStart] 未找到或无法加载服务段，回退到 XML 构建。\n";
             }
             try {
                 if (!std::filesystem::exists(xml_path)) {
@@ -230,11 +230,11 @@ int main(int argc, char* argv[]) {
                 std::chrono::duration<double>(t_merge_done - t_parse_done).count();
             const double total_sec =
                 std::chrono::duration<double>(t_merge_done - t_parse_begin).count();
-            std::cout << "\n[计时] XML 解析耗时(parse_file): " << parse_sec << " 秒\n";
-            std::cout << "[计时] 全局归并耗时(merge_local_indexes): " << merge_sec << " 秒\n";
-            std::cout << "[计时] 总耗时(parse + merge + save segment): " << total_sec << " 秒\n";
+            std::cout << "\n[计时] XML 解析耗时（parse_file）: " << parse_sec << " 秒\n";
+            std::cout << "[计时] 全局归并耗时（merge_local_indexes）: " << merge_sec << " 秒\n";
+            std::cout << "[计时] 总耗时（解析 + 归并 + 保存服务段）: " << total_sec << " 秒\n";
         }
-        std::cout << "已载入文档数: " << engine.document_count() << "，平均标题词数(avgdl): " << engine.average_doc_length() << "\n";
+        std::cout << "已载入文档数: " << engine.document_count() << "，平均标题词数（avgdl）: " << engine.average_doc_length() << "\n";
     } catch (const std::exception& ex) {
         std::cerr << "解析或归并阶段发生异常: " << ex.what() << '\n';
         return 1;

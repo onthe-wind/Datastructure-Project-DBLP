@@ -116,9 +116,9 @@ void run_query_benchmark(const ExtremeEngine& engine, std::ostream& os, const ch
         return;
     }
 
-    os << "\n========== F5 Query Benchmark ==========\n";
-    os << "[Suite] " << suite.size() << " queries from " << suite_path << "\n";
-    os << "[Corpus] docs=" << engine.document_count() << " avgdl=" << engine.average_doc_length() << "\n\n";
+    os << "\n========== F5 查询评测基准 ==========\n";
+    os << "[评测集] " << suite.size() << " 条查询，来源: " << suite_path << "\n";
+    os << "[语料] 文档数=" << engine.document_count() << " avgdl=" << engine.average_doc_length() << "\n\n";
 
     std::vector<QueryBenchmarkRow> rows;
     rows.reserve(suite.size());
@@ -146,9 +146,9 @@ void run_query_benchmark(const ExtremeEngine& engine, std::ostream& os, const ch
         rows.push_back(std::move(row));
     }
 
-    os << std::left << std::setw(6) << "id" << std::setw(14) << "category" << std::setw(12) << "path"
-       << std::setw(10) << "total_ms" << std::setw(8) << "hits" << std::setw(10) << "postings"
-       << std::setw(8) << "docs" << "query\n";
+    os << std::left << std::setw(6) << "编号" << std::setw(14) << "类别" << std::setw(12) << "路径"
+       << std::setw(10) << "总耗时ms" << std::setw(8) << "命中" << std::setw(10) << "倒排访问"
+       << std::setw(8) << "文档数" << "查询\n";
     os << std::string(96, '-') << '\n';
 
     for (const QueryBenchmarkRow& row : rows) {
@@ -180,16 +180,16 @@ void run_query_benchmark(const ExtremeEngine& engine, std::ostream& os, const ch
         postings_sum += row.profile.postings_visited;
     }
 
-    os << "\n========== Summary ==========\n";
-    os << "[Latency] min=" << (latencies.empty() ? 0.0 : latencies.front())
+    os << "\n========== 汇总 ==========\n";
+    os << "[延迟] 最小=" << (latencies.empty() ? 0.0 : latencies.front())
        << " ms p50=" << percentile(latencies, 0.50) << " ms p95=" << percentile(latencies, 0.95)
        << " ms p99=" << percentile(latencies, 0.99)
-       << " ms max=" << (latencies.empty() ? 0.0 : latencies.back())
-       << " ms mean=" << (rows.empty() ? 0.0 : sum / static_cast<double>(rows.size())) << " ms\n";
-    os << "[Paths] result_cache=" << cache_hits << " full_scan=" << full_scan << '\n';
-    os << "[Load] postings_visited_sum=" << postings_sum << '\n';
+       << " ms 最大=" << (latencies.empty() ? 0.0 : latencies.back())
+       << " ms 平均=" << (rows.empty() ? 0.0 : sum / static_cast<double>(rows.size())) << " ms\n";
+    os << "[执行路径] 结果缓存=" << cache_hits << " 全量扫描=" << full_scan << '\n';
+    os << "[负载] 倒排访问总数=" << postings_sum << '\n';
 
-    os << "\n========== Per-query profiles (last run) ==========\n";
+    os << "\n========== 单条查询性能画像（最近一次运行） ==========\n";
     for (const QueryBenchmarkRow& row : rows) {
         os << "\n--- " << row.id << " (" << row.category << ") ---\n";
         row.profile.print(os);

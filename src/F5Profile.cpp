@@ -39,14 +39,14 @@ void F5SearchProfile::reset() noexcept {
 
 void F5SearchProfile::print(std::ostream& os) const {
     os << std::fixed << std::setprecision(3);
-    os << "[Profile] path=" << f5_exec_path_name(path)
-       << " cache=" << (result_cache_hit ? "hit" : "miss")
-       << " total_ms=" << total_ms << " parse_ms=" << parse_ms << " rewrite_ms=" << rewrite_ms
-       << " score_ms=" << score_ms << " rank_ms=" << rank_ms << " emit_ms=" << emit_ms << '\n';
-    os << "[Profile] terms raw=" << raw_query_terms << " scoring=" << scoring_terms
-       << " matched=" << matched_query_terms << " fuzzy_rewrite=" << fuzzy_rewrite_count
-       << " requested_topk=" << requested_topk << '\n';
-    os << "[Profile] postings visited=" << postings_visited << " scored=" << postings_scored
-       << " blocks_pruned=" << blocks_pruned << " docs_touched=" << docs_touched
-       << " total_hits=" << total_hits << " emitted=" << results_emitted << '\n';
+    os << "[性能画像] 执行路径=" << f5_exec_path_name(path)
+       << " 结果缓存=" << (result_cache_hit ? "命中" : "未命中")
+       << " 总耗时_ms=" << total_ms << " 解析_ms=" << parse_ms << " 改写_ms=" << rewrite_ms
+       << " 打分_ms=" << score_ms << " 排序_ms=" << rank_ms << " 输出_ms=" << emit_ms << '\n';
+    os << "[性能画像] 查询词 原始=" << raw_query_terms << " 打分=" << scoring_terms
+       << " 命中=" << matched_query_terms << " 容错改写=" << fuzzy_rewrite_count
+       << " 请求Top-K=" << requested_topk << '\n';
+    os << "[性能画像] 倒排访问=" << postings_visited << " 倒排打分=" << postings_scored
+       << " 剪枝块=" << blocks_pruned << " 触达文档=" << docs_touched
+       << " 总命中=" << total_hits << " 已输出=" << results_emitted << '\n';
 }
